@@ -1,0 +1,296 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>MDR</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  
+  <!--font-->
+  <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/styles.min.css">
+  <link rel="stylesheet" href="/css/modul.min.css">
+  <link rel="stylesheet" href="/css/private.min.css">
+  <link rel="stylesheet" href="/css/admin.min.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <div class="wrap-admin">
+    <header class="header bg-admin">
+      <nav class="nav">
+        <div class="wrap-nav">
+          <div class="nav-logo">
+            <a class="logo-link" href="/index.html">
+              <img class="img-logo" src="/img/src/logo/logo.svg" alt="MDR">
+            </a>            
+          </div>          
+        </div>        
+      </nav>
+    </header>
+    
+    <main>
+      <section class="breadcrumbs">
+        <div class="wrap-breadcrumbs">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-item">
+                    <a class="breadcrumbs-link" href="/index.html">Главная</a>
+                </li>
+                <li class="breadcrumbs-item">
+                   / 
+                </li>    
+               <li class="breadcrumbs-item">
+                   Админка
+               </li>
+            </ul>
+        </div>            
+      </section>
+      
+      <section class="main-block main-medium-aside">
+        <aside class="aside aside-nav">          
+          <div class="wrap-aside-nav bg-admin">
+            <div class="aside-block">
+              <div class="aside-logo">
+                <img class="aside-logo-img" src="/img/src/logo/logo.svg" alt="MDR">
+              </div>
+              <h2 class="aside-private-h2 aside-admine-h2">Админка:</h2>
+              <ul class="aside-nav-list">
+                <li class="aside-admine-nav-item">
+                  <a class="link-aside-admine" href="/html/admin/admin.html"><h2 class="admine-h3">Личные даные админа</h2></a>
+                </li>                            
+              </ul>
+              
+              <h2 class="aside-h2 aside-admine-h2">Товар:</h2>
+              <ul class="aside-nav-list">
+                <li class="aside-admine-nav-item">
+                  <a class="link-aside-admine" href="/html/admin/create.html"><h2 class="admine-h3">Создать товар</h2></a>
+                </li>
+                <li class="aside-admine-nav-item">
+                  <a class="link-aside-admine" href="/html/admin/edit.html"><h2 class="admine-h3">Редактировать товар</h2></a>
+                </li>
+                <li class="aside-admine-nav-item">
+                  <a class="link-aside-admine" href="/html/admin/modul-collection.html"><h2 class="admine-h3">Коллекция (Модуль)</h2></a>
+                </li>
+                <li class="aside-admine-nav-item">
+                  <a class="link-aside-admine" href="/html/admin/ready-collection.html"><h2 class="admine-h3">Коллекция (Готовая)</h2></a>
+                </li> 
+                <li class="aside-admine-nav-item">
+                  <a class="link-aside-admine" href="/html/admin/color.html"><h2 class="admine-h3">Цвет для мебели</h2></a>
+                </li>         
+              </ul>
+
+              <h2 class="aside-h2 aside-admine-h2">Классификатор:</h2>
+              <ul class="aside-nav-list">
+                <li class="aside-admine-nav-item">
+                  <a class="link-aside-admine" href="/html/admin/category.html"><h2 class="admine-h3">Новая категория</h2></a>
+                </li>
+                <li class="aside-admine-nav-item">
+                  <a class="link-aside-admine" href="/html/admin/sub-category.html"><h2 class="admine-h3">Новая подкатегория</h2></a>
+                </li>                        
+              </ul>
+            </div>            
+          </div> 
+          <div class="wrap-aside-h1 wrap-a-left">
+            <h1 class="aside-h1 color-admin">
+              Админка
+            </h1>            
+          </div>       
+        </aside>
+
+        <section class="admin-main-block">
+          <div class="wrap-head-page bg-admin">
+            <h1 class="page-h1">Создать подкатегорию</h1>
+          </div>
+
+          <div class="wrap-head-page-h3">
+            <h3 class="page-h3 color-admin">Данные о подкатегории:</h3>                            
+          </div>
+
+          <div class="wrap-create-product-data">
+            <form class="create-product-data">
+              <ul class="wrap-create-collection-list">
+                <li class="wrap-create-product-item">
+                  <label class="create-product-label">
+                    Категория товара
+                  </label>
+                  <div class="wrap-create-product-item">
+                    <select class="create-product-select" name="class" id="class" required>
+                      <option class="class" value="" >--Выберите категорию товара--</option>
+                      <option class="class" value="Гостиные">Гостиные</option>
+                      <option class="class" value="Кухни">Кухни</option>
+                      <option class="class" value="Детские">Детские</option> 
+                      <option class="class" value="Домашний офис">Домашний офис</option>                 
+                      <option class="class" value="Прихожие">Прихожие</option>
+                      <option class="class" value="Спальни">Спальни</option>
+                      <option class="class" value="Шкафы">Шкафы</option>                  
+                      <option class="class" value="Мягкая мебель">Мягкая мебель</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="wrap-create-product-item">
+                  <label class="create-product-label">
+                    Название новой подкатегории
+                  </label>
+                  <div class="wrap-create-product-item">
+                    <input class="create-product-input" type="text" id="new_category" name="new_category" required />
+                  </div>
+                </li> 
+                <li class="wrap-create-product-item">
+                  <label class="create-product-label">
+                    Название новой подкатегории по английски
+                  </label>
+                  <div class="wrap-create-product-item">
+                    <input class="create-product-input" type="text" id="new_category_inenglish" name="new_category_inenglish" required />
+                  </div>
+                </li>
+                <li class="wrap-create-product-item">
+                  <label class="create-product-label">
+                    Выберите фото
+                  </label>
+                  <div class="wrap-create-product-item">
+                    <input class="create-product-input-foto" type="file" id="foto" name="foto" accept="image/png, image/jpeg" required/>
+                  </div>
+                </li>
+                <li class="wrap-create-product-item">
+                  <button class="mdr-button accept modul-button">
+                    Сохранить
+                  </button>
+                </li>             
+              </ul>            
+            </form>
+  
+            <div class="create-product-data">
+              <ul class="wrap-create-collection-list">
+                <li class="wrap-create-product-item">
+                  <label class="create-product-label">
+                    Подкатегории в базе:
+                  </label>
+                  <ul class="create-product-list">
+                    <li class="create-product-item modul-category-data">
+                      <article class="collect-article">Модульная коллекция</article>
+                      <button class="mdr-button stop modul-button-delete">
+                        Удалить
+                      </button>
+                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
+                        Редактировать
+                      </a>
+                    </li> 
+                    <li class="create-product-item modul-category-data">
+                      <article class="collect-article">Модульная коллекция</article>
+                      <button class="mdr-button stop modul-button-delete">
+                        Удалить
+                      </button>
+                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
+                        Редактировать
+                      </a>
+                    </li>
+                    <li class="create-product-item modul-category-data">
+                      <article class="collect-article">Модульная коллекция</article>
+                      <button class="mdr-button stop modul-button-delete">
+                        Удалить
+                      </button>
+                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
+                        Редактировать
+                      </a>
+                    </li>
+                    <li class="create-product-item modul-category-data">
+                      <article class="collect-article">Модульная коллекция</article>
+                      <button class="mdr-button stop modul-button-delete">
+                        Удалить
+                      </button>
+                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
+                        Редактировать
+                      </a>
+                    </li>
+                    <li class="create-product-item modul-category-data">
+                      <article class="collect-article">Модульная коллекция</article>
+                      <button class="mdr-button stop modul-button-delete">
+                        Удалить
+                      </button>
+                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
+                        Редактировать
+                      </a>
+                    </li>
+                    <li class="create-product-item modul-category-data">
+                      <article class="collect-article">Модульная коллекция</article>
+                      <button class="mdr-button stop modul-button-delete">
+                        Удалить
+                      </button>
+                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
+                        Редактировать
+                      </a>
+                    </li>
+                    <li class="create-product-item modul-category-data">
+                      <article class="collect-article">Модульная коллекция</article>
+                      <button class="mdr-button stop modul-button-delete">
+                        Удалить
+                      </button>
+                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
+                        Редактировать
+                      </a>
+                    </li>
+                    <li class="create-product-item modul-category-data">
+                      <article class="collect-article">Модульная коллекция</article>
+                      <button class="mdr-button stop modul-button-delete">
+                        Удалить
+                      </button>
+                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
+                        Редактировать
+                      </a>
+                    </li>
+                    <li class="create-product-item modul-category-data">
+                      <article class="collect-article">Модульная коллекция</article>
+                      <button class="mdr-button stop modul-button-delete">
+                        Удалить
+                      </button>
+                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
+                        Редактировать
+                      </a>
+                    </li>
+                    <li class="create-product-item modul-category-data">
+                      <article class="collect-article">Модульная коллекция</article>
+                      <button class="mdr-button stop modul-button-delete">
+                        Удалить
+                      </button>
+                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
+                        Редактировать
+                      </a>
+                    </li>
+                  </ul>              
+                </li>
+              </ul>            
+            </div>
+          </div>
+        </section>       
+      </section>
+    </main>
+    
+    <footer class="footer-admin">
+      <section class="signature">
+        Design by svara.factory
+      </section>      
+    </footer>
+  </div>
+  
+  <script src="/js/main.min.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

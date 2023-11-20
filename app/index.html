@@ -1,0 +1,1481 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>MDR</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  
+  <!--font-->
+  <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="css/modul.min.css">
+  <link rel="stylesheet" href="css/page.min.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="visible">
+  <div class="wrap">
+    <header class="header">
+      <nav class="nav-index">
+        <div class="wrap-nav">
+          <div class="nav-logo">
+            <a class="logo-link" href="/index.html">
+              <img class="img-logo" src="/img/src/logo/logo.svg" alt="MDR">
+            </a>            
+          </div>
+  
+          <ul class="navigation-list">            
+            <li class="navigation-item animation-nav class-for-anime nav-positon active-link">
+              <a class="nav-link-box " href="#home">
+                В начало
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav class-for-anime nav-positon">
+              <a class="nav-link-box" href="#catalog">
+                Каталог
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav class-for-anime nav-positon">
+              <a class="nav-link-box" href="#new">
+                Наши новинки
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav class-for-anime nav-positon">
+              <a class="nav-link-box" href="#recomendation">
+                Мы рекомендуем
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav class-for-anime nav-positon">
+              <a class="nav-link-box" href="#idea">
+                Идеи для вас
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav class-for-anime nav-positon">
+              <a class="nav-link-box" href="#pop">
+                Популярные товары
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav class-for-anime nav-positon">
+              <a class="nav-link-box" href="#footer">
+                Контакты
+              </a> 
+            </li>
+          </ul>
+  
+          <div class="auth">
+            <ul class="auth-list">
+              <li class="auth-item auth-search" data-tooltipe="Поиск">
+                <img class="img-auth-item" src="/img/src/icon/search.png" alt="Поиск по сайту">
+              </li>
+              <li class="auth-item" data-tooltipe="Избранное">
+                <a class="link-auth-item" href="#">
+                  <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>                
+                </a>                
+              </li>
+              <li class="auth-item" data-tooltipe="Корзина">
+                <a class="link-auth-item" href="#">
+                  <i class="fa fa-shopping-cart fa-2x fa-cart" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="auth-item" data-tooltipe="Вход / Регистрация">
+
+                <div class="wrap-auth-item-box">
+                  <a class="link-auth-item auth-item-slid" href="{{route('profile.show')}}">
+                    <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+                  </a>   
+                  
+                  <artical class="link-auth-item auth-item-slid js-call">
+                    <i class="fa fa-sign-in fa-3x fa-sign" aria-hidden="true"></i>
+                  </artical>
+                </div>                
+                
+              </li>                  
+            </ul>
+          </div>
+        </div>        
+      </nav>
+    </header>
+
+    <section class="modal-block">
+      <div class="wap-img-logo-modal">
+        <img class="img-logo-modal" src="/img/src/logo/logo.svg" alt="MDR">
+      </div>      
+      <article class="modal-content">Вы успешно авторизировались на нашем сайте.</article>
+      <ul class="modal-list open-box">
+        <li class="modal-item">
+          <a class="modal-link mdr-button accept" href="#">Перейти в личный кабинет</a>
+        </li>
+        <li class="modal-item">
+          <div class="modal-link mdr-button stop js-close">Остаться на странице</div>
+        </li>
+      </ul>      
+      <ul class="modal-list close">        
+        <li class="modal-item">
+          <div class="modal-link mdr-button stop js-close">Закрыть</div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="search index-search start-search">
+      <form class="form-search">
+        <div>
+          <input id="search" name="search" class="input-search" />
+        </div>
+        <div class="wrap-button-search">
+          <button class="button-search" type="submit" name="submit_form">Найти</button>
+        </div>            
+      </form>
+    </section>    
+
+    <section class="callback-block">
+      <div class="wrap-callback">
+        <article class="callback-cross">
+          <img class="img-cross" src="img/src/icon/cross.png" alt="Cross" />
+        </article>
+        <article class="article-callback">
+          Вопросы? Напишите нам!
+        </article>
+        <form id="form" class="call-back-form"  method="post">
+          <input class="call-back-mail" type="text" name="name" placeholder="Укажите ваше имя" required>
+          <input class="call-back-mail" type="text" name="surname" placeholder="Укажите вашу фамилию" required>
+          <input class="call-back-mail" type="text" name="number" placeholder="Укажите номер заказа">
+          <article class="call-back-mail">
+            *если у вас нет номера заказа, вы не совершали заказ, то номер писать не обязательно. Заполните эту графу если у вас есть номер это облегчит нам задачу.
+          </article>
+          <input class="call-back-mail" type="numder" name="phone" placeholder="телефон" required>
+          <input class="call-back-mail" type="email" name="email" placeholder="Укажите e-mail" required>
+          <textarea class="call-back-mail" type="text" name="Текст" placeholder="Введите текст" required></textarea>
+          <button class="mdr-button accept position-bottom" type="submit" value="Задать вопрос">Задать вопрос</button>
+        </form>
+        <p class="msg-w none">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </section>
+
+    <section class="auth-block"> 
+      <div class="wrap-auth-block">
+        <section class="block-auth visible-block-auth">
+          <article class="auth-cross">
+            <img class="img-cross" src="img/src/icon/cross.png" alt="Cross" />
+          </article>
+          <div class="block-auth-head">
+            <img class="block-auth-logo" src="/img/src/logo/logo.svg" alt="Логотип" />
+          </div>
+  
+          <div class="wrap-auth-item">
+            <h2 class="block-auth-h1">Вход в личный кабинет</h2>
+            <form class="form-auth">
+              <div class="wrap-input wrap-input-auth" data-answer="">
+                <input id="email-auth" type="email" name="auth" placeholder="Введите свой email" class="input-auth"  />
+              </div>
+              <div class="wrap-input wrap-input-auth" data-answer="">
+                <input id="password-auth" type="password" name="auth" placeholder="Введите свой пароль" class="input-auth" />
+              </div>
+              <button class="button-auth accept" type="submit" name="submit-auth">Войти</button>
+            </form>
+            <ul class="form-list">
+              <li class="form-input">
+                <article class="form-item-link registration-slide">Регистрация</article>
+              </li>
+              <li class="form-input">
+                <a class="form-item-link" href="/html/auth/reg.html">Восстановление пароля</a>
+              </li>
+            </ul>
+          </div> 
+        </section>
+  
+        <section class="block-reg">
+          <article class="auth-cross">
+            <img class="img-cross" src="img/src/icon/cross.png" alt="Cross" />
+          </article>
+          <div class="block-auth-head">
+            <img class="block-auth-logo" src="/img/src/logo/logo.svg" alt="Логотип" />
+          </div>
+  
+          <div class="wrap-auth-item">
+            <h1 class="block-auth-h1">Регистрация</h1>
+            <form class="form-auth-reg">
+              <div class="wrap-fio-form">
+                <div class="wrap-input wrap-input-reg" data-answer="Заполните поле.">
+                  <input id="name-reg" type="text" name="name" placeholder="Ваше имя" class="input-auth" />
+                </div>
+                <div class="wrap-input wrap-input-reg" data-answer="Заполните поле.">
+                  <input id="familia" type="text" name="familia" placeholder="Ваша фамилия" class="input-auth" />
+                </div>
+                <div class="wrap-input wrap-input-reg" data-answer="Заполните поле.">
+                  <input id="father-name" type="text" name="father-name" placeholder="Ваше отчество" class="input-auth" />
+                </div>
+              </div>              
+              <div class="wrap-input wrap-input-reg" data-answer="Заполните поле.">
+                <input id="email-reg" type="email" name="email" placeholder="Ваш email" class="input-auth" />
+              </div>
+              <div class="wrap-input wrap-input-reg" data-answer="Заполните поле.">
+                <input id="phone" type="number" name="phone" placeholder="Ваш телефон" class="input-auth" />
+              </div>
+              <div class="wrap-input wrap-input-reg" data-answer="Заполните поле.">
+                <input id="password-reg" type="password" name="password" placeholder="Пароль" class="input-auth" />
+              </div>
+              <div class="wrap-input wrap-input-reg" data-answer="Заполните поле.">
+                <input id="confirm-password" type="password" name="confirm-password" placeholder="Подтвердите пароль" class="input-auth" />   
+              </div>
+              <button class="button-auth accept btn-reg" type="submit" name="submit-auth">Регистрация</button>
+            </form>
+            <ul class="form-list">
+              <li class="form-input">
+                <article class="form-item-link auth-slide">Уже зарегестрированы?</article>
+              </li>
+              <li class="form-input">
+                <a class="form-item-link" href="/html/auth/reg.html">Восстановление пароля</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>      
+    </section>
+
+    <section class="callback">
+      <ul class="callback-list">
+        <li class="callback-item red-bg animation-callback" data-callback="Написать письмо">
+          <i class="fa fa-envelope fa-2x callback-btn" aria-hidden="true"></i>
+        </li>
+        <li class="callback-item alt-bg animation-callback" data-callback="Чат с консультантом">
+          <i class="fa fa-comments fa-2x" aria-hidden="true"></i>
+        </li>
+      </ul>
+    </section>
+    
+    <main>
+      <section class="wrap-slider" id="home">
+        <div class="slider">
+          <ul class="slider-list">
+            <li class="slider-item slider-opacity">
+              <div class="wrap-block-item">
+                <img class="img-slider-item" src="/img/src/temp/slider/1.jpg" />                
+              </div>
+            </li>
+            <li class="slider-item ">
+              <div class="wrap-block-item">
+                <img class="img-slider-item" src="/img/src/temp/slider/2.jpg" />                
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="wrap-block-item">
+                <img class="img-slider-item" src="/img/src/temp/slider/3.jpg" />                
+              </div>
+            </li>            
+          </ul>
+          
+          <div class="filter">
+            <div class="wrap-slider-content">
+              <div class="slider-content">
+                <img class="img-logo" src="/img/src/logo/logo.svg" alt="MDR">
+                <article class="slider-slogan">
+                  Мебель в Рязани от лучших производителей
+                </article>
+              </div>              
+            </div>            
+          </div>
+        </div>
+        
+        <section class="navigation">
+          <ul class="navigation-list-bottom">
+            <li class="navigation-item ni-link">
+              <a class="nav-link-box" href="#home">
+                В начало
+              </a>
+            </li>
+            <li class="navigation-item ni-link">
+              <a class="nav-link-box" href="#catalog">
+                Каталог
+              </a> 
+            </li>
+            <li class="navigation-item ni-link">
+              <a class="nav-link-box" href="#new">
+                Наши новинки
+              </a> 
+            </li>
+            <li class="navigation-item ni-link">
+              <a class="nav-link-box" href="#recomendation">
+                Мы рекомендуем
+              </a>
+            </li>
+            <li class="navigation-item ni-link">
+              <a class="nav-link-box" href="#idea">
+                Идеи для вас
+              </a> 
+            </li>
+            <li class="navigation-item ni-link">
+              <a class="nav-link-box" href="#pop">
+                Популярные товары
+              </a>
+            </li>
+            <li class="navigation-item ni-link">
+              <a class="nav-link-box" href="#footer">
+                Контакты
+              </a>
+            </li>            
+          </ul>
+        </section>
+      </section>
+
+      <section class="main-block main-min-aside" id="catalog">
+        <aside class="aside aside-min bg">
+          <article class="aside-name-block">
+            <h2 class="aside-block-h2 ab-left color">
+              Каталог
+            </h2>
+          </article>
+        </aside>
+
+        <div class="content-main-block">
+          <ul class="main-block-list block-4fr box-align-right">
+            <li class="main-block-item">
+              <a class="main-block-link" href="/html/catalog/livingroom.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/livingroom.jpg" alt="Гостиные">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-for-catalog">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Гостиные
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item">
+              <a class="main-block-link" href="/html/catalog/child.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/child.jpg" alt="Детские">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-for-catalog">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Детские
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item">
+              <a class="main-block-link" href="/html/catalog/kitchen.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/kitchen.jpg" alt="Кухни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-for-catalog">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Кухни
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item">
+              <a class="main-block-link" href="/html/catalog/hall.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/hall.jpg" alt="Прихожие">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-for-catalog">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Прихожие
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>                  
+            <li class="main-block-item">
+              <a class="main-block-link" href="/html/catalog/sleep.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/sleep.jpg" alt="Спальни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-for-catalog">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>      
+            <li class="main-block-item">
+              <a class="main-block-link" href="/html/catalog/cabinet.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/coupe.jpg" alt="Шкафы">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-for-catalog">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Шкафы
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item">
+              <a class="main-block-link" href="/html/catalog/sleep.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/table.jpg" alt="Домашний офис">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-for-catalog">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Домашний офис
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>      
+            <li class="main-block-item">
+              <a class="main-block-link" href="/html/catalog/cabinet.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/divan.jpg" alt="Мягкая мебель">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-for-catalog">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Мягкая мебель
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>             
+          </ul>
+        </div>
+      </section>
+
+      <section class="block-info">
+        <div class="wrap-bg-info">
+          <img class="block-info-img" src="/img/src/static/info/1.jpg" alt="Фото товара">
+        </div>
+        <div class="filter-info">
+          <ul class="block-info-list">
+            <li class="block-info-item">
+              <img class="block-info-img" src="/img/src/static/info/1.jpg" alt="Фото товара">
+              <div class="filter">
+                <div class="wrap-block-info-logo">
+                  <img class="block-info-logo" src="/img/src/logo/logo.svg" alt="Фото товара">
+                </div>              
+              </div>
+            </li>          
+            <li class="block-info-item">
+              <div class="block-info-content">
+                <h3 class="block-info-h3">
+                  Широкий выбор продукции
+                </h3>
+                <article class="block-info-article">
+                  Ни для кого не секрет, что у каждого человека свои вкусовые предпочтения.
+                </article>
+                <article class="block-info-article">
+                  Мы учли этот момент, и предлагаем мебель разных стилей, но неизменно высокого качества. 
+                </article>
+                <article class="block-info-article">
+                  Вы без труда подберете вариант, который идеально впишется в интерьер Вашей квартиры или дома.
+                </article>
+              </div>
+             </li>
+          </ul>
+        </div>        
+      </section>
+
+      <section class="main-block main-min-aside-rv" id="new">
+        <div class="content-main-block">
+          <ul class="main-block-list block-4fr box-align-left">
+            <li class="main-block-item new-box">
+              <a class="main-block-link" href="/html/catalog/livingroom.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/livingroom.jpg" alt="Гостиные">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-index-box">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Шкафы
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item new-box">
+              <a class="main-block-link" href="/html/catalog/child.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/child.jpg" alt="Детские">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Прихожие
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item new-box">
+              <a class="main-block-link" href="/html/catalog/kitchen.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/kitchen.jpg" alt="Кухни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Кухни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                    
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item new-box">
+              <a class="main-block-link" href="/html/catalog/hall.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/hall.jpg" alt="Прихожие">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-index-box">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Гостиные
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>                  
+            <li class="main-block-item new-box">
+              <a class="main-block-link" href="/html/catalog/sleep.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/sleep.jpg" alt="Спальни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>      
+            <li class="main-block-item new-box">
+              <a class="main-block-link" href="/html/catalog/cabinet.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/coupe.jpg" alt="Шкафы">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>                 
+          </ul>
+        </div>
+
+        <aside class="aside-rv bg">
+          <article class="aside-name-block">
+            <h2 class="aside-block-h2 ab-right color wnb-revers">
+              Наши новинки
+            </h2>
+          </article>
+        </aside>
+      </section>
+
+      <section class="block-info">
+        <div class="wrap-bg-info">
+          <img class="block-info-img" src="/img/src/static/info/2.jpg" alt="Фото товара">
+        </div>
+        <div class="filter-info">
+          <ul class="block-info-list-rv">
+            <li class="block-info-item">
+              <img class="block-info-img" src="/img/src/static/info/2.jpg" alt="Фото товара">
+              <div class="filter">
+                <div class="wrap-block-info-logo">
+                  <img class="block-info-logo" src="/img/src/logo/logo.svg" alt="Фото товара">
+                </div>              
+              </div>
+            </li>          
+            <li class="block-info-item">
+              <div class="block-info-content-rv">
+                <h3 class="block-info-h3">
+                  Индивидуальный подход
+                </h3>
+                <article class="block-info-article">
+                  Мы всегда идем навстречу клиентам, учитываем их пожелания и финансовые возможности
+                </article>
+                <article class="block-info-article">
+                  Благодаря помощи консультанта, Вы без труда подберете оптимальный вариант мебели на любой вкус
+                </article>
+                <article class="block-info-article">
+                  Индивидуальные условия сотрудничества, демократичная ценовая политика – все это доступно абсолютно каждому
+                </article>
+              </div>
+             </li>
+          </ul>
+        </div>        
+      </section>
+
+      <section class="main-block main-min-aside" id="recomendation">
+        <aside class="aside-min bg">
+          <article class="aside-name-block">
+            <h2 class="aside-block-h2 ab-left color">
+              Мы рекомендуем
+            </h2>
+          </article>
+        </aside>
+
+        <div class="content-main-block">
+          <ul class="main-block-list block-4fr box-align-right">
+            <li class="main-block-item recomendation-box">
+              <a class="main-block-link" href="/html/catalog/product.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/livingroom.jpg" alt="Гостиные">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-index-box">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item recomendation-box">
+              <a class="main-block-link" href="/html/catalog/child.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/child.jpg" alt="Детские">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-index-box">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item recomendation-box">
+              <a class="main-block-link" href="/html/catalog/kitchen.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/kitchen.jpg" alt="Кухни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item recomendation-box">
+              <a class="main-block-link" href="/html/catalog/hall.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/hall.jpg" alt="Прихожие">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>                  
+            <li class="main-block-item recomendation-box">
+              <a class="main-block-link" href="/html/catalog/sleep.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/sleep.jpg" alt="Спальни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>      
+            <li class="main-block-item recomendation-box">
+              <a class="main-block-link" href="/html/catalog/cabinet.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/coupe.jpg" alt="Шкафы">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                     
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>                         
+          </ul>
+        </div>
+      </section>
+
+      <section class="block-info">
+        <div class="wrap-bg-info">
+          <img class="block-info-img" src="/img/src/static/info/3.jpg" alt="Фото товара">
+        </div>
+        <div class="filter-info">
+          <ul class="block-info-list">
+            <li class="block-info-item">
+              <img class="block-info-img" src="/img/src/static/info/3.jpg" alt="Фото товара">
+              <div class="filter">
+                <div class="wrap-block-info-logo">
+                  <img class="block-info-logo" src="/img/src/logo/logo.svg" alt="Фото товара">
+                </div>              
+              </div>
+            </li>          
+            <li class="block-info-item">
+              <div class="block-info-content">
+                <h3 class="block-info-h3">
+                  Гарантия качества
+                </h3>
+                <article class="block-info-article">
+                  Мы реализуем исключительно качественную и надежную мебель, которая прослужит Вам долгие годы и при этом сохранит свой первоначальный облик.
+                </article>
+                <article class="block-info-article">
+                  В случае, если произошла какая-то нештатная ситуация, например, повреждение, наши специалисты готовые устранить недостатки.
+                </article>
+                <article class="block-info-article">
+                  Или же при Вашем желании, Вы можете вернуть покупку в течение 1 месяца после приобретения.
+                </article>
+              </div>
+             </li>
+          </ul>
+        </div>        
+      </section>
+
+      <section class="main-block main-min-aside-rv" id="idea">
+        <div class="content-main-block">
+          <ul class="main-block-list block-4fr box-align-left">
+            <li class="main-block-item idea-box">
+              <a class="main-block-link" href="/html/catalog/livingroom.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/livingroom.jpg" alt="Гостиные">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Шкафы
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item idea-box">
+              <a class="main-block-link" href="/html/catalog/child.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/child.jpg" alt="Детские">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content position-index-box">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Прихожие
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item idea-box">
+              <a class="main-block-link" href="/html/catalog/kitchen.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/kitchen.jpg" alt="Кухни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Кухни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                    
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item idea-box">
+              <a class="main-block-link" href="/html/catalog/hall.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/hall.jpg" alt="Прихожие">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Гостиные
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>                  
+            <li class="main-block-item idea-box">
+              <a class="main-block-link" href="/html/catalog/sleep.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/sleep.jpg" alt="Спальни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>      
+            <li class="main-block-item idea-box">
+              <a class="main-block-link" href="/html/catalog/cabinet.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/coupe.jpg" alt="Шкафы">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item idea-box">
+              <a class="main-block-link" href="/html/catalog/hall.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/hall.jpg" alt="Прихожие">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Гостиные
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>                  
+            <li class="main-block-item idea-box">
+              <a class="main-block-link" href="/html/catalog/sleep.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/sleep.jpg" alt="Спальни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>      
+            <li class="main-block-item idea-box">
+              <a class="main-block-link" href="/html/catalog/cabinet.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/coupe.jpg" alt="Шкафы">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>                 
+          </ul>
+        </div>
+
+        <aside class="aside-rv bg">
+          <article class="aside-name-block">
+            <h2 class="aside-block-h2 ab-right color wnb-revers">
+              Идеи для вас
+            </h2>
+          </article>
+        </aside>
+      </section>
+
+      <section class="block-info">
+        <div class="wrap-bg-info">
+          <img class="block-info-img" src="/img/src/static/info/4.jpg" alt="Фото товара">
+        </div>
+        <div class="filter-info">
+          <ul class="block-info-list-rv">
+            <li class="block-info-item">
+              <img class="block-info-img" src="/img/src/static/info/4.jpg" alt="Фото товара">
+              <div class="filter">
+                <div class="wrap-block-info-logo">
+                  <img class="block-info-logo" src="/img/src/logo/logo.svg" alt="Фото товара">
+                </div>              
+              </div>
+            </li>          
+            <li class="block-info-item">
+              <div class="block-info-content-rv">
+                <h3 class="block-info-h3">
+                  Сборка мебели
+                </h3>
+                <article class="block-info-article">
+                  Несмотря на кажущуюся простоту, процесс сборки мебели требует наличия определенных навыков, знаний и использования специального инструмента
+                </article>
+                <article class="block-info-article">
+                  Мы предоставляем услугу по сборке мебели на территории заказчика
+                </article>
+                <article class="block-info-article">
+                  Процесс выполненный профессионалами исключает риск случайного повреждения и значительно сокращает сроки на установку
+                </article>
+              </div>
+             </li>
+          </ul>
+        </div>        
+      </section>
+
+      <section class="main-block main-min-aside" id="pop">
+        <aside class="aside-min bg">
+          <article class="aside-name-block">
+            <h2 class="aside-block-h2 ab-left color">
+              Популярные товары
+            </h2>
+          </article>
+        </aside>
+
+        <div class="content-main-block">
+          <ul class="main-block-list block-3fr box-align-right">
+            <li class="main-block-item pop-box">
+              <a class="main-block-link" href="/html/catalog/livingroom.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/livingroom.jpg" alt="Гостиные">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item pop-box">
+              <a class="main-block-link" href="/html/catalog/child.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/child.jpg" alt="Детские">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item pop-box">
+              <a class="main-block-link" href="/html/catalog/kitchen.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/kitchen.jpg" alt="Кухни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>
+            <li class="main-block-item pop-box">
+              <a class="main-block-link" href="/html/catalog/hall.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/hall.jpg" alt="Прихожие">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>                  
+            <li class="main-block-item pop-box">
+              <a class="main-block-link" href="/html/catalog/sleep.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/sleep.jpg" alt="Спальни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>      
+            <li class="main-block-item pop-box">
+              <a class="main-block-link" href="/html/catalog/cabinet.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/coupe.jpg" alt="Шкафы">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                     
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li> 
+            <li class="main-block-item pop-box">
+              <a class="main-block-link" href="/html/catalog/hall.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/hall.jpg" alt="Прихожие">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>                  
+            <li class="main-block-item pop-box">
+              <a class="main-block-link" href="/html/catalog/sleep.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/sleep.jpg" alt="Спальни">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                      
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>      
+            <li class="main-block-item pop-box">
+              <a class="main-block-link" href="/html/catalog/cabinet.html">
+                <img class="main-block-item-img" src="/img/src/static/catalog/coupe.jpg" alt="Шкафы">
+                <div class="filter-main" data-link="Посмотреть">
+                  <div class="main-block-box-content">
+                    <div class="main-block-info">
+                      <article class="main-block-article">                    
+                        Спальни
+                      </article>
+                      <article class="main-block-price">
+                       &#8381 11000 
+                      </article>                     
+                    </div>                    
+                  </div> 
+                </div>
+              </a>
+            </li>                        
+          </ul>
+        </div>
+      </section>
+
+      <section class="block-info">
+        <div class="wrap-bg-info">
+          <img class="block-info-img" src="/img/src/static/info/5.jpg" alt="Фото товара">
+        </div>
+        <div class="filter-info">
+          <ul class="block-info-list">
+            <li class="block-info-item">
+              <img class="block-info-img" src="/img/src/static/info/5.jpg" alt="Фото товара">
+              <div class="filter">
+                <div class="wrap-block-info-logo">
+                  <img class="block-info-logo" src="/img/src/logo/logo.svg" alt="Логотип">
+                </div>              
+              </div>
+            </li>          
+            <li class="block-info-item">
+              <div class="block-info-content">
+                <h3 class="block-info-h3">
+                  Оплата и Доставка
+                </h3>
+                <article class="block-info-article">
+                  Вне всяких сомнений, покупки в режиме онлайн это всегда удобно, ведь Вы можете не отрываться от своих повседневных дел или работы.
+                </article>
+                <article class="block-info-article">
+                  Для удобства наших клиентов, мы также предоставляем возможность оплаты онлайн удобным для Вас способом.
+                </article>
+                <article class="block-info-article">
+                  Заказывая у нас мебель, Вы можете не переживать о ее доставке. Мы сами решаем этот вопрос и гарантируем, что Ваше приобретение прибудет в целости и сохранности в точно оговоренные сроки, без каких-либо задержек.
+                </article>
+              </div>
+             </li>
+          </ul>
+        </div>        
+      </section>
+
+      <section class="block-subscrible">
+        <div class="wrap-block-subscrible">
+          <div class="logo-subscrible">
+            <img class="block-subscrible-logo" src="/img/src/logo/logo.svg" alt="Логотип">
+          </div>
+          <div class="text-subscrible-h3">
+            Подписывайся, чтобы не успутить главное!
+          </div>
+          <div class="text-subscrible">
+            Получай первым информацию о наших новинках, акциях, скидках и многом другом
+          </div>
+          <form class="form-subscrible">
+            <div>
+              <input id="email" name="subscribe" placeholder="Введите свой email" class="input-subscrible" />
+            </div>
+            <div class="wrap-button-subscrible">
+              <button class="button-subscrible" type="submit" name="submit_form">Подписаться</button>
+            </div>            
+          </form>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="footer" id="footer">
+      <div class="wrap-footer">
+        <section class="left-footer">
+          <div class="footer-slogan">
+            <div class="wrap-footer-span">
+              <span class=footer-span>My  Decor  Room</span> - Ваш надежный поставщик мебели!
+            </div>            
+          </div>
+          <ul class="wrap-footer-nav-list">
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Гостиные</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Модульные гостиные</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Стенки</a>
+                </li>                
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Комоды</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Журнальные столы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Полки и антресоли</a>
+                </li>                
+              </ul>
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Детская мебель</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Модульные детские</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Кровати детские</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Письменные столы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Шкафы и стеллажи</a>
+                </li>         
+              </ul>
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Домашний офис</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Письменные столы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Компьютерные столы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Компьютерные кресла</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Стеллажи</a>
+                </li>
+              </ul>
+            </li>            
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Прихожие</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Модульные прихожие</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Готовые прихожие</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Угловые прихожие</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Шкафы для прихожей</a>
+                </li> 
+              </ul>               
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Спальни</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Модульные спальни</a>
+                </li>                
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Прикроватные тумбы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Комоды</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Столы туалетные</a>
+                </li>
+              </ul>
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Шкафы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Шкафы-купе</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Распашные шкафы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Шкафы для одежды</a>
+                </li>
+              </ul>
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Кухни</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Модульные кухни</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Готовые кухни</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Обеденые столы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Кухонные диваны и уголки</a>
+                </li>
+              </ul>
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Мягкая мебель</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Диваны</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Кресла</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Пуфы</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+  
+        <section class="right-footer">
+          <ul class="footer-data-list">            
+            <li class="footer-data-item">
+              <img class="footer-img-logo" src="/img/src/logo/logo.svg" alt="Логотип" />
+            </li>
+            <li class="footer-data-item">
+              My Decor Room - Мебельный интернет-магазин.
+            </li>
+            <li class="footer-data-item">
+              <i class="fa fa-envelope fa-1x" aria-hidden="true"><span class="fa-font-mdr">  manager@mydecor-room.ru</span></i>
+            </li>
+            <li class="footer-data-item">
+              <a class="footer-data-link" href="tel:+79209685108"><i class="fa fa-phone fa-1x fa-phone-mdr" aria-hidden="true"><span class="fa-font-mdr">  +7 920 968-51-08</span></i></a>
+            </li>
+            <li class="footer-data-item">
+              Наименование юридического лица:
+            </li>
+            <li class="footer-data-item">
+              ИП Чулин Д.С.
+            </li>
+            <li class="footer-data-item">
+              ОГРНИП: 321623400030109
+            </li>
+            <li class="footer-data-item">
+              Место нахождения организации:
+            </li>
+            <li class="footer-data-item">
+              390000 г. Рязань, Ряжское шоссе, д.20 «КАСКАД» офис 311
+            </li>
+            <li class="footer-data-item">
+              <img class="bank" src="/img/src/icon/bank-icon.png" alt="Платежные системы" />
+            </li>
+            <li class="footer-data-item">
+              <ul class="footer-soc-list">
+                <li class="footer-soc-item">
+                  <a class="footer-soc-link" target="_blank" href="#"><img class="soc-img" src="/img/src/icon/od.png" alt="Vkontakte" /></a>
+                </li>
+                <li class="footer-soc-item">
+                  <a class="footer-soc-link" target="_blank" href="#"><img class="soc-img" src="/img/src/icon/tg.png" alt="Telegram" /></a>
+                </li>
+                <li class="footer-soc-item">
+                  <a class="footer-soc-link" target="_blank" href="#"><img class="soc-img" src="/img/src/icon/vk.png" alt="odnoklassniki" /></a>
+                </li>                
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="footer-nav">
+        <div class="footer-link">
+          <ul class="footer-link-list">
+            <li class="footer-link-item">
+              г. Рязань
+            </li>
+            <li class="footer-link-item">
+              <a class="footer-link-link" href="index.html">В начало страницы</a>
+            </li>
+            <li class="footer-link-item">
+              <a class="footer-link-link" href="index.html">Главная</a>
+            </li>            
+            <li class="footer-link-item">
+              <a class="footer-link-link" href="/html/info/info.html">Информация</a>
+            </li>
+            <li class="footer-link-item">
+              <a class="footer-link-link" href="/html/service/service.html">Услуги</a>
+            </li>
+            <li class="footer-link-item">
+              <div class="footer-link-link">Сотрудничество</div>
+            </li>
+            <li class="footer-link-item">
+              <a class="footer-link-link" href="aboutus.html">О нас</a>
+            </li>
+            <li class="footer-link-item">
+              &#169; My Decor Room  2023
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="signature">
+        Design by svara.factory
+      </section>
+      
+    </footer>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="js/main.min.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

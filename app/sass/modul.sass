@@ -1,0 +1,1209 @@
+$base: #4C6373
+
+$main: #657C8D
+
+$alt: #1878ba
+
+$h-link: #B3CCDE
+
+$green: #6a8981
+
+$red: #714b4f
+
+$gap: 1.5vw
+    
+//* --HEADER-- *//
+header
+  width: 100%
+  height: auto 
+  color: #fff 
+  position: fixed
+  z-index: 300 
+
+nav
+  width: 100%
+  height: 8vh  
+  transition: 0.3s
+
+.nav-index
+  width: 100%
+  height: 8vh  
+  transition: 0.3s
+
+.nav-scroll
+  background: rgba(0, 33, 55, 0.7) 
+  backdrop-filter: blur(1vh)
+
+.wrap-nav
+  width: 80%
+  height: 100%
+  margin: 0 auto
+  display: grid
+  grid-template-columns: 2fr 7fr 1fr
+
+.nav-logo
+  padding: 1.2vh
+  height: 8vh
+  box-sizing: border-box
+
+.logo-link
+  display: block
+  width: 100%
+  height: 100%
+
+.img-logo
+  width: auto
+  height: 100%
+
+.navigation-list
+  display: inline-flex
+  gap: $gap
+  justify-content: center  
+
+.navigation-item
+  display: grid
+  height: 100%
+  justify-content: center
+  align-items: center
+  text-transform: uppercase
+  cursor: pointer
+  overflow: hidden
+  position: relative
+  transition: 0.3s
+
+.nav-link-box
+  display: grid
+  height: 100%
+  justify-content: center
+  align-items: center
+
+.ni-link
+  font-size: 1.2em
+
+.nav-positon
+  margin-top: -10vh
+
+.navigation-item:hover, .navigation-item:hover .nav-link-box
+  color: $h-link
+
+.animation-nav::before
+  content: ''
+  width: 100%
+  border-top: 1px solid $h-link
+  box-sizing: border-box
+  position: absolute
+  top: 2.5vh
+  z-index: 30
+  left: 100%
+  transition: 0.6s
+
+.animation-nav::after
+  content: ''
+  width: 100%
+  border-top: 1px solid $h-link
+  box-sizing: border-box
+  position: absolute
+  bottom: 2.5vh
+  z-index: 30
+  right: 100%
+  transition: 0.6s
+
+.active-link .nav-link-box
+  color: $h-link
+
+.active-link::before
+  left: 0%
+
+.active-link::after
+  right: 0%
+
+.navigation-item:hover::before
+  left: 0%
+  transition: 0.6s
+
+.navigation-item:hover::after
+  right: 0%
+  transition: 0.6s
+
+//* --AUTH-BLOCK-- **//      
+.auth-list
+  height: 100%
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  gap: 10px
+  justify-content: center
+  align-content: center
+
+.wrap-auth-item-box
+  height: 8vh
+  width: 100%
+  position: relative
+  overflow: hidden
+
+.auth-item
+  padding: 2vh
+  height: 8vh
+  box-sizing: border-box
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  transition: 0.3s
+
+.auth-item-slid
+  transform: translateY(-8vh)
+
+.auth-item-slid-profile
+  transform: translateY(0vh)
+
+.auth-search
+  transform: translateY(-10vh)
+
+.auth-item-visible
+  transform: translateY(0)
+
+.auth-item:hover
+  transform: scale(1.15)
+  transition: 0.3s
+
+.link-auth-item
+  display: block
+  height: 100%
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  transition: 0.3s
+
+.link-auth-item:hover
+  color: $alt
+
+.auth-item::after
+  content: attr(data-tooltipe)
+  color: #fff
+  position: absolute
+  top: 80%
+  text-align: center
+  border: 1px solid rgba(255, 255, 255, 0.5)
+  padding: 0.5vh
+  background: rgba(0, 33, 55, 0.3)
+  opacity: 0
+  transition: 0.5s
+  text-transform: uppercase
+  font-size: 0.7em  
+  visibility: hidden
+
+.auth-item:hover::after
+  opacity: 1
+  transition: 0.5s
+  transition-delay: 0.2s
+  visibility: visible
+
+.img-auth-item
+  width: auto
+  height: 60%
+
+//* --NAVIGATION-BOTTOM-- **//
+.navigation
+  width: 100%  
+  position: fixed
+  bottom: 0  
+  z-index: 20
+  padding: 5px 0 
+  overflow: hidden 
+  height: 7vh
+
+.navigation-list-bottom 
+  width: 100%
+  display: inline-flex  
+  gap: 25px
+  justify-content: center
+  transition: 0.5s
+
+.navigation-down
+  transform: translateY(10vh)
+
+.ni-link
+  display: block
+  padding: 0.5vh 0
+  border-top: 1px solid #fff
+  border-bottom: 1px solid #fff
+
+.ni-link:hover 
+  border-top: 1px solid $h-link
+  border-bottom: 1px solid $h-link
+
+//* --MODAL-BLOCK-- *//
+.modal-block
+  position: fixed
+  background: $green
+  border-radius: 20px 40px
+  width: 40vw
+  left: 30vw
+  top: 10vh
+  z-index: 330
+  padding: 5vh
+  box-sizing: border-box
+  box-shadow: inset 0px 0px 20px 20px rgba(76, 99, 115, 0.3)
+  display: grid
+  align-items: center
+  justify-content: center
+  transform: translateY(-200%)
+  transition: 0.3s
+
+.modal-block-open
+  transform: translateY(0%)
+
+.wap-img-logo-modal
+  text-align: center
+
+.img-logo-modal
+  width: 7vw
+  padding-bottom: 4vh
+
+.modal-content
+  color: #fff
+  font-size: 1.5em
+  text-transform: uppercase
+  padding-bottom: 6vh
+  text-align: center
+
+.modal-list
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 25px
+  visibility: hidden
+  height: 0
+
+.modal-link:hover
+  color: $h-link
+
+.close
+  display: block
+
+.close .modal-item
+  width: 50%
+  margin: 0 auto
+
+.open-box
+  visibility: visible
+  height: auto
+
+//* --BLOCK-BREADCRUMBS-- *//
+.breadcrumbs
+  margin-top: 8vh
+  padding: 1vh 0
+  box-sizing: border-box
+
+.wrap-breadcrumbs
+  width: 80%
+  margin: 0 auto
+
+.breadcrumbs-list
+  display: inline-flex
+  gap: 1vw
+
+.breadcrumbs-item
+  text-transform: uppercase
+  font-weight: bold
+  color: #4c6373
+
+.breadcrumbs-link
+  color: #1878ba  
+  cursor: pointer
+
+//* --MAIN-- *//
+main
+  width: 100%
+  height: 100%
+  display: grid
+  grid-template-rows: auto 1fr auto
+
+.main-block
+  width: 100%
+  height: 100%
+  display: grid
+
+.main-min-aside  
+  grid-template-columns: 10% 80%
+
+.main-min-aside-rv
+  grid-template-columns: 80% 10%
+  justify-content: end
+
+.main-medium-aside
+  grid-template-columns: 25% 65%
+
+.main-medium-aside-rv
+  grid-template-columns: 60% 30%
+  justify-content: end
+
+//* --ASIDE-- *//
+aside  
+  height: 100%
+
+.aside-min  
+  width: 60%
+
+.aside-rv  
+  width: 60%
+  margin-left: auto
+
+.aside-nav
+  display: grid
+  grid-template-columns: 7fr 1fr
+
+.aside-nav-rv
+  display: grid
+  grid-template-columns: 1fr 7fr
+
+.aside-name-block
+  width: 100%
+  height: 100%
+  display: grid
+  justify-content: center
+
+.aside-block-h2
+  text-align: center
+  writing-mode: vertical-rl 
+  font-size: 4.2em
+  text-transform: uppercase  
+
+.ab-left
+  margin-left: 7.6vw
+
+.ab-right
+  margin-right: 7.6vw
+
+.wrap-aside-h1
+  min-height: 70vh
+  display: grid
+  justify-content: center
+
+.wrap-a-right
+  margin-right: -2.1vw
+
+.wrap-a-left
+  margin-left: -1.5vw
+
+.aside-h1
+  text-align: center
+  writing-mode: vertical-rl 
+  font-size: 4.2em
+  text-transform: uppercase  
+  height: 70vh
+  position: sticky
+  top: 15vh 
+
+.info-h1
+  font-size: 3.5em
+  height: 90vh
+
+.info-h1-alt
+  font-size: 5em
+  height: auto
+
+//* --ASIDE-NAV-- *//
+.wrap-aside-nav
+  height: 100%
+  padding: 7vh 5vh 
+  box-sizing: border-box
+
+.wrap-aside-box-nav
+  padding: 5vh 5vh
+  box-sizing: border-box
+
+.aside-block 
+  max-height: 70vh
+  position: sticky
+  top: 12vh
+  bottom: 10vh
+  transition: 0.3s
+
+.aside-block a:hover
+  color: $h-link
+
+.aside-logo
+  width: 100%
+  text-align: center
+
+.aside-logo-img
+  width: 50%
+
+.aside-nav-list   
+  width: 100%
+  text-align: center
+  padding-bottom: 5vh
+
+.link-aside
+  display: block
+  width: 100%
+  padding: 1vh 0 1vh 0
+  text-align: center
+  color: #fff
+  transition: 0.3s
+
+.aside-h2  
+  text-transform: uppercase
+  font-size: 1.5em
+
+.aside-h3
+  text-transform: uppercase
+  font-size: 1.1em
+
+.link-aside:hover
+  color: $h-link
+
+.wrap-aside-link-h2
+  display: block
+  padding: 2vh 0 2vh 0
+  text-align: center
+  font-size: 1.1em
+
+.aside-nav-list-sub
+  height: 0
+  overflow: hidden
+  transition: height 0.5s linear
+
+.aside-nav-item-sub
+  font-size: 1em
+  text-transform: uppercase
+  padding-bottom: 1.5vh
+  font-weight: bold
+
+.aside-nav-item-h2
+  font-size: 1.3em
+  padding: 1vh 0 1vh 0
+  text-transform: uppercase 
+  display: block 
+  transition: 0.3s
+  font-weight: bold
+
+.open-menu
+  padding: 1vh 0 1.5vh 0 
+
+//* --MAIN-BLOCK-- *//
+.content-main-block
+  padding: 10vh 0
+
+.head-page-padding
+  padding: 0
+
+.padding-header-page
+  padding-bottom: 5vh
+
+.wrap-head-page  
+  height: 6vh
+  display: grid
+  align-items: end
+
+.page-h1
+  color: #fff
+  text-transform: uppercase
+  text-align: right
+  font-size: 3em
+  margin: 0 5vh -0.9vh 0
+
+.wrap-head-page-h3
+  display: grid
+  grid-template-columns: 8fr 2fr
+
+.page-h3
+  text-transform: uppercase
+  font-size: 2em
+  margin: 4vh 0 4vh 5vh
+
+.private-page-h3
+  text-transform: uppercase
+  font-size: 2em
+  margin: 0 0 2vh 5vh
+
+.main-block-list
+  display: grid  
+  grid-gap: 1.5vw
+
+.block-2fr
+  grid-template-columns: repeat(2, 1fr)
+  grid-auto-rows: 38vh
+
+.block-3fr
+  grid-template-columns: repeat(3, 1fr)
+  grid-auto-rows: 30vh
+
+.block-3fr-alt
+  grid-template-columns: repeat(3, 1fr)
+  grid-auto-rows: 25vh
+
+.block-3fr-page
+  grid-template-columns: repeat(3, 1fr)
+  grid-auto-rows: 25vh
+  padding: 5vh 0 0 5vh
+
+.block-4fr
+  grid-template-columns: repeat(4, 1fr)
+  grid-auto-rows: 25vh
+
+.block-4fr-page
+  grid-template-columns: repeat(4, 1fr)
+  grid-auto-rows: 20vh
+  padding: 5vh 0 0 5vh
+  
+.box-align-right
+  justify-content: end
+  margin-left: 5vw 
+
+.box-align-left
+  justify-content: start
+  margin-right: 5vw
+
+.main-block-item
+  width: 100%
+  height: 100%  
+  cursor: pointer  
+
+.main-block-link
+  display: block
+  width: 100%
+  height: 100%
+  position: relative
+  overflow: hidden
+  border-radius: 20px 40px
+  box-shadow: 7px 7px 10px 2px rgba(0,0,0,0.2)
+  background: #fff
+
+.item-block-border
+  border-radius: 20px
+
+.j-width-mini
+  width: 100%
+  height: 100%
+  object-fit: fill
+  cursor: pointer 
+
+.j-height-mini
+  width: 100%
+  height: 100%
+  object-fit: contain
+  cursor: pointer
+
+.main-block-box-content
+  display: grid
+  width: 100%
+  height: 100%
+  justify-content: end
+  align-items: end
+  font-size: 1.3em
+  color: #fff
+  text-transform: uppercase
+  padding: 3vh
+  box-sizing: border-box
+
+.main-block-info
+  text-align: right
+  transition: 0.2s
+
+.position-for-catalog
+  justify-content: center
+  align-items: center
+  font-size: 1.6em
+
+.position-index-box
+  font-size: 2em
+  padding: 7vh
+
+.main-block-price
+  padding-top: 1vh
+
+.position-index-box .main-block-price
+  padding-top: 2vh
+
+.height-box-content
+  grid-auto-rows: 47vh
+  padding: 0 0 5vh 5vh
+
+//* --BLOCK-SUBSCRIBLE-- *//
+.block-subscrible
+  padding: 10vh 0
+  width: 100%
+  background: #cd7f32
+
+.wrap-block-subscrible
+  width: 80%
+  margin: 0 auto
+  display: grid
+  gap: 25px
+  text-align: center
+  grid-template-rows: 10vh
+
+.block-subscrible-logo
+  height: 100%
+  width: auto
+
+.text-subscrible-h3
+  font-size: 2em
+  font-weight: bold
+  text-transform: uppercase
+
+.text-subscrible
+  font-size: 1.6em
+  text-transform: uppercase
+
+.form-subscrible
+  display: inline-flex
+  justify-content: center   
+
+.input-subscrible
+  width: 40vw
+  height: 50px
+  padding: 0 10px
+  box-sizing: border-box
+  border-radius: 20px 0px 0px 10px
+  border: 4px solid #4c6373
+  outline: none
+  font-size: 1.5em
+
+.wrap-button-subscrible
+  width: 10vw
+
+.button-subscrible
+  width: 10vw
+  border: 3px solid #4c6373
+  background: #4c6373
+  height: 50px
+  padding: 5px 20px 5px 20px
+  box-sizing: border-box
+  border-radius: 0px 10px 20px 0px
+  font-size: 1.4em
+  color: #4c6373 
+  cursor: pointer
+  transition: 0.3s
+  text-transform: uppercase
+  overflow: hidden
+  position: relative
+
+.button-subscrible::after
+  content: 'Подписаться'
+  position: absolute
+  color: #fff
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: grid
+  justify-content: center
+  align-items: center
+
+.button-subscrible::before
+  content: ''
+  position: absolute
+  width: 150%
+  height: 200%
+  border-radius: 50px
+  background: rgba(88, 107, 121, 0.4)
+  top: -300%
+  left: -150%
+  transition: 0.3s  
+
+.button-subscrible:hover::before
+  top: -90%
+  left: -55%
+  transition: 0.3s
+
+//* --FOOTER-- *//
+footer
+  width: 100%
+  padding-top: 10vh
+  background: rgba(0, 0, 0, 0.9)
+  color: #fff
+
+.wrap-footer
+  display: grid
+  grid-template-columns: 2fr 1fr
+  width: 80%
+  margin: 0 auto
+
+.footer-slogan
+  font-size: 2em
+  height: 10vh
+  display: grid
+  align-items: center
+
+.footer-span
+  text-transform: uppercase
+
+.wrap-footer-nav-list
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+
+.wrap-footer-nav-item
+  padding-bottom: 5vh
+
+.footer-nav-item
+  font-size: 1.2em
+  text-transform: uppercase
+  padding-bottom: 0.5vh
+
+.footer-nav-item:first-child
+  font-size: 1.6em
+  padding-bottom: 1.5vh
+
+.link-footer-nav
+  color: #fff
+
+.link-footer-nav:hover
+  color: $alt
+
+.right-footer
+  text-align: right
+
+.footer-img-logo
+  height: 10vh
+
+.footer-data-list
+  padding-bottom: 4vh
+
+.footer-data-item
+  font-size: 1.1em
+  padding: 1vh 0
+
+.footer-data-item:nth-child(1)
+  padding: 0
+
+.footer-data-item:nth-child(2)
+  padding: 20px 0
+  font-size: 1.5em
+
+.footer-data-item:nth-child(3),
+.footer-data-item:nth-child(4),
+.footer-data-item:nth-child(4) a
+  padding: 10px 0
+  font-size: 1.2em
+  color: $alt
+
+.footer-data-item:nth-child(7)
+  padding: 2vh 0
+
+.footer-data-item:nth-child(10)
+  padding: 4vh 0 0 0
+
+.bank
+  height: 5vh
+
+.footer-soc-list
+  display: inline-flex
+  gap: $gap
+  grid-template-columns: repeat(4,1fr)
+  align-items: right
+  min-width: 0
+  padding-top: 0px
+
+.footer-soc-item
+  position: relative
+  transition: .5s
+  padding-top: 2vh
+
+.footer-soc-link
+  display: block
+
+.footer-soc-item .soc-img
+  height: 5vh
+  transition: .5s
+
+.footer-soc-item:hover .soc-img
+  transition: .5s
+  transform: rotate(360deg)
+
+.footer-link
+  width: 100%
+  background: rgba(0,0,0,.85)
+
+.footer-link-list
+  width: 80%
+  margin: 0 auto
+  padding: 20px 0 20px 0
+  display: grid
+  grid-template-columns: repeat(8,auto)
+  align-items: center
+  text-align: center
+
+.footer-link-item
+  padding: 20px 0
+  font-size: 1.1em
+  text-transform: uppercase
+
+.footer-link-item:first-child
+  font-size: 1.3em
+  margin-right: 100px
+
+.footer-link-item:last-child
+  margin-left: 150px
+
+.footer-link-link
+  color: #e3dac5
+
+.signature
+  width: 80%
+  margin: 0 auto
+  padding: 2vh 0
+  text-align: right
+
+.bg-rec
+  background: #98B0C2
+
+.recomendation-block-h2
+  writing-mode: vertical-rl
+  padding: 5vh 0 0 5vh
+  font-size: 4em
+  text-transform: uppercase 
+  color: #e7ebee
+
+//* --CALLBACK-- *//
+.callback
+  position: fixed
+  bottom: 4vh
+  right: 2vh
+  z-index: 150
+
+.callback-list
+  height: auto
+  display: grid
+  gap: 2.5vh
+
+.callback-item
+  padding: 2vh
+  border-radius: 50%
+  color: #fff
+  cursor: pointer
+  transition: .5s
+  box-sizing: border-box
+  position: relative
+
+.callback-item::after
+  content: attr(data-callback)
+  color: #fff
+  position: absolute
+  top: 25%
+  right: 4vw
+  text-align: center
+  border: 1px solid rgba(255, 255, 255, 0.5)
+  padding: 0.5vh
+  background: rgba(0, 33, 55, 0.3)
+  opacity: 0
+  transition: 0.5s
+  text-transform: uppercase
+  visibility: hidden
+
+.callback-item:hover::after
+  opacity: 1
+  visibility: visible
+
+.animation-callback
+  animation-duration: 4s
+  animation-name: scale
+  animation-iteration-count: infinite
+
+@keyframes scale 
+  0%
+    transform: scale(1)
+    
+  40% 
+    transform: scale(1.1)
+
+  60% 
+    transform: scale(1.1)
+    
+  100%
+    transform: scale(1)  
+
+//* ==CALLBACK-CABINET== *//
+.callback-block, .auth-block
+  position: fixed
+  width: 100%
+  height: 100vh
+  z-index: 310
+  padding-top: 5vh
+  background: rgba(76, 99, 115, 0.5)
+  transform: translateY(-200vh)
+  transition: 0.5s
+
+.callback-visible
+  transform: translateY(0vh)
+  transition: 0.5s
+
+.wrap-callback
+  max-width: 40%
+  margin: 0 auto
+  background: $base
+  height: 90vh
+  border: 1px solid #ffffff
+  padding: 40px
+  box-sizing: border-box
+  border-radius: 20px 40px
+
+.callback-cross
+  text-align: right
+  margin-top: -10px
+
+.article-callback
+  color: #ffffff
+  font-size: 2em
+  width: 100%
+  padding: 10px 0
+  border-bottom: 1px solid #ffffff
+
+.call-back-form
+  padding: 20px 0
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(2, calc(50% - 12.5px))
+  grid-gap: 25px
+
+.call-back-mail
+  border: none
+  height: 5vh
+  padding: 0 10px
+  box-sizing: border-box
+  outline: none
+  font-size: 1.3em
+  border-radius: 10px 20px
+
+.call-back-mail:nth-child(3), .call-back-mail:nth-child(4), .call-back-mail:nth-child(7)
+  grid-column: 1/3
+
+.call-back-mail:nth-child(4)
+  color: $h-link
+  padding: 0 5px
+  font-size: 1.1em
+  margin-top: -20px
+  margin-bottom: -20px
+
+.call-back-mail:nth-child(7)
+  height: 300px
+  padding: 15px 10px
+  min-height: 5vh
+  max-height: 30vh
+  resize: vertical
+
+.call-back-button
+  background: rgb(115, 142, 76)
+  font-size: 1.4em
+  color: #ffffff
+  padding: 10px 0
+  box-sizing: border-box
+  border: none
+  grid-column: 1/3
+  cursor: pointer
+  transition: 0.3s
+
+.call-back-button:active
+  transition: 0.3s
+  transform: scale(0.98)
+
+.msg-w 
+  color: $h-link
+  transition: 0.3s
+
+//* --AUTH-- *//
+.wrap-auth-block
+  position: relative
+  text-align: center
+  width: 40%
+  margin: 10vh auto 0 auto
+
+.block-auth, .block-reg
+  width: 100%
+  border: 2px solid #4c6373
+  border-radius: 10px 40px
+  overflow: hidden
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.2)
+  background: $h-link
+  position: absolute
+  opacity: 0
+  display: none
+  transition: 0.3s
+
+.visible-block-auth
+  opacity: 1
+  display: block
+
+
+.auth-cross
+  position: absolute
+  z-index: 320
+  top: 2vh
+  right: 3vh
+
+.block-auth-head
+  width: 100%
+  height: 10vh
+  background: #4c6373
+  text-align: center
+  padding: 1vh
+  box-sizing: border-box
+
+.block-auth-logo
+  height: 100%
+
+.block-auth-h1
+  width: 100%
+  text-align: center
+  text-transform: uppercase
+  color: #4c6373
+  padding: 3vh 0
+  font-size: 1.5em
+
+.form-auth
+  text-align: center
+
+.form-auth-reg
+  display: grid
+  grid-template-columns: 1fr 1fr
+  padding: 0 2vh
+  gap: 0 25px
+
+.wrap-fio-form
+  grid-column: span 2
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  gap: 15px
+
+.wrap-input
+  width: 25vw
+  margin: 0 auto 1vh auto
+  position: relative
+  transition: 0.3s
+
+.wrap-input-padding
+  margin: 0 auto 4vh auto
+  
+.input-auth
+  width: 100%
+  height: 4vh
+  padding: 0 1vh
+  box-sizing: border-box
+  border-radius: 10px 5px
+  border: 2px solid #4c6373
+  outline: none
+  font-size: 1.2em
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.2)
+  transition: 0.3s
+
+.input-error 
+  border: 2px solid $red
+
+.wrap-input-padding::after
+  content: attr(data-answer)
+  background: $red
+  color: #fff
+  width: 30vw
+  box-sizing: border-box
+  position: absolute
+  padding: 0.5vh 0
+  left: 0
+  top: 110%
+  border-radius: 5px 5px
+  transition: 0.3s
+  text-align: center
+
+.wrap-input-reg
+  width: 30vw
+
+.btn-reg
+  grid-column: span 2
+
+.button-auth
+  width: 25vw
+  margin: 0 auto 2vh auto
+  height: 5vh
+  padding: 0 2vh
+  box-sizing: border-box
+  border-radius: 20px 10px
+  font-size: 1.5em
+  cursor: pointer
+  text-transform: uppercase
+  color: #fff
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.2)
+  transition: 0.3s
+
+.form-list
+  margin: 0 5vh 3vh 5vh
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 25px
+
+.form-item-link
+  display: block
+  text-align: center
+  font-size: 1em
+  text-transform: uppercase
+  color: #4c6373
+  transition: 0.3s
+  padding: 2vh 0
+  cursor: pointer
+
+.form-input:first-child .form-item-link:hover
+  border-radius: 20px 10px
+  background: #6a8981
+  color: #fff
+  transition: 0.3s
+
+.form-input:last-child .form-item-link:hover
+  border-radius: 20px 10px
+  background: #4c6373
+  color: #fff
+  transition: 0.3s
+
+//* --SEARCH-- *//
+.search
+  position: fixed
+  width: 50%
+  height: 6vh
+  top: -10vh
+  z-index: 90
+  left: 25%  
+  transform: translateY(0vh)
+  transition: 0.5s
+
+.start-search
+  top: 25vh
+
+.main-search
+  top: 9vh
+
+.form-search
+  width: 100%
+  height: 100%
+  display: grid
+  grid-template-columns: 8fr 2fr
+
+.input-search
+  width: 100%
+  height: 100%
+  padding: 0 10px
+  box-sizing: border-box
+  border-radius: 20px 0px 0px 10px
+  border: 4px solid rgba(0, 33, 55, 1) 
+  outline: none
+  font-size: 1.5em
+  background: rgba(255, 255, 255, 0.4)
+  color: $alt
+
+.start-search .input-search
+  background: rgba(255, 255, 255, 0.4)
+
+.main-search .input-search
+  background: rgba(255, 255, 255, 0.8)
+
+.button-search
+  width: 100%
+  height: 100%
+  background: rgba(0, 33, 55, 1) 
+  border-radius: 0px 10px 20px 0px
+  text-transform: uppercase
+  color: #fff
+  font-size: 1.4em
+  border: none
+  outline: none
+  cursor: pointer
+  

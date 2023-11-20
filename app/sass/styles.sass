@@ -1,0 +1,468 @@
+//* ==GENERAL-SETTING== *//
+.clearfix:before,
+.clearfix:after
+  content: " "
+  display: table
+
+.clearfix:after
+  clear: both
+
+ul, menu
+  margin: 0
+  padding: 0
+
+li
+  display: block
+  margin: 0
+  padding: 0
+  list-style: none
+
+p
+  margin: 0
+  padding: 0
+
+a
+  margin: 0
+  padding: 0
+  text-decoration: none
+  transition: 0.3s
+  color: #fff
+
+a:hover
+  color: rgba(231, 67, 67, 0.7)
+  transition: 0.3s
+
+h1, h2, h3, h4
+  margin: 0
+  padding: 0
+
+.none
+  visibility: hidden
+
+$base: #4C6373
+
+$main: #B48D73
+
+$alt: #1878ba
+
+$green: #6a8981
+
+$green-btn: #4b7165
+
+$red: #ca7b83
+
+$gap: 1.5vw
+
+html
+  max-width: 100%
+  height: 100%
+  font-family: 'Montserrat', Arial, sans-serif
+  scroll-behavior: smooth  
+
+body
+  max-width: 100%
+  height: 100%
+  font-size: 12px
+  position: relative
+
+.noscroll
+  overflow: hidden
+
+.wrap
+  display: grid
+  height: 100%
+  grid-template-rows: 1fr auto
+
+.filter
+  position: absolute
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.4)
+  top: 0
+  z-index: 10
+  display: grid
+  grid-template-rows: 1fr
+  align-items: end
+
+.filter-main
+  position: absolute
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.4)
+  top: 0
+  z-index: 10
+
+.filter-main:hover .modul-block-info, .filter-main:hover .main-block-info
+  opacity: 0
+
+.filter-main:hover .wrap-main-block-sm
+  opacity: 0  
+
+.filter-main::after
+  content: attr(data-link)
+  position: absolute
+  width: 200%
+  height: 150%
+  border-radius: 50%
+  background: rgba(0, 33, 55, 0.4)
+  top: 100%
+  right: 100%
+  z-index: 10
+  transition: 0.5s
+  color: #fff
+  display: grid
+  justify-content: center
+  align-items: center
+  text-transform: uppercase
+  font-size: 1.5em
+
+.filter-main:hover::after
+  top: -20%
+  right: -50%
+  transition: 0.5s
+
+.filter-main:hover .cart-block-info
+  opacity: 0
+
+.wnb-revers
+  transform: rotate(180deg) 
+
+.bg
+  background: $base
+
+.color
+  color: $base
+
+.alt-bg
+  background: $green
+
+.red-bg
+  background: $red
+
+.alt-color
+  color: $green
+
+.fa-sign
+  font-size: 2.5em
+
+.fa-cart
+  font-size: 2.2em
+
+.fa-heart, .fa-delete, .fa-cart, .fa-heart-price
+  transition: 0.3s
+  cursor: pointer
+
+.fa-heart-private:hover, .fa-heart-price:hover, .fa-heart-p:hover
+  transform: scale(1.2)
+
+.fa-heart-private:active, .fa-heart-price:active, .fa-heart-p:active
+  transform: scale(1)
+
+.fa-delete:hover
+  transform: rotate(45deg)
+
+.fa-delete:active
+  transform: rotate(360deg)
+
+.fa-cart:hover
+  transform: rotate(15deg) 
+
+.fa-cart:active
+  transform: rotate(360deg)
+
+.fa-phone-mdr
+  color: #1878ba
+
+.fa-font-mdr
+  font-family: 'Montserrat', Arial, sans-serif
+
+.fa-heart-price
+  color: #fff  
+  width: 10%
+
+.fa-heart-p
+  color: #4c6373 
+  width: 10%
+
+.fa-product-color
+  color: #4c6373
+
+.cart-block-draw
+  padding: 5vh 1vh 0 1vh
+  color: #4c6373
+
+.tooltipe, .t-price, .l-item, .r-item
+  position: relative
+
+.tooltipe::after
+  content: attr(data-tooltipe)
+  color: #fff
+  position: absolute
+  top: 120%
+  left: -100%
+  text-align: center
+  border: 1px solid rgba(255, 255, 255, 0.5)
+  padding: 0.5vh
+  background: rgba(0, 33, 55, 0.3)
+  opacity: 0
+  transition: 0.5s
+  text-transform: uppercase
+  font-size: 0.8em
+
+.t-price::after
+  width: 4vw
+  content: attr(data-tooltipe)
+  color: #fff
+  position: absolute
+  top: 100%
+  left: 150%
+  text-align: center
+  border: 1px solid rgba(255, 255, 255, 0.5)
+  padding: 0.5vh
+  background: rgba(0, 33, 55, 0.3)
+  opacity: 0
+  transition: 0.5s
+  text-transform: uppercase
+  font-size: 0.8em
+
+.tooltipe:hover::after
+  opacity: 1
+  transition: 0.5s
+
+.t-price:hover::after
+  opacity: 1
+  transition: 0.5s
+  top: 10%
+
+.l-item::after, .r-item::after
+  content: attr(data-box)
+  width: 4vw
+  color: #fff
+  position: absolute
+  top: 200%
+  text-align: center
+  border: 1px solid rgba(255, 255, 255, 0.5)
+  padding: 0.5vh
+  background: rgba(0, 33, 55, 0.3)
+  opacity: 0
+  transition: 0.5s
+  text-transform: uppercase
+  font-size: 0.8em
+
+.l-item::after
+  left: 150%
+
+.r-item::after
+  right: 150%
+
+.l-item:hover::after, .r-item:hover::after
+  opacity: 1
+  transition: 0.5s
+  top: -5%
+
+.mdr-button
+  color: #fff  
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.2)
+  transition: 0.3s
+  text-align: center
+  border-radius: 10px 20px
+  cursor: pointer
+  text-transform: uppercase
+  padding: 2vh
+  box-sizing: border-box
+  display: block
+
+.position-bottom
+  grid-column: span 2
+
+.stop
+  background: $red
+  border: 1px solid $red
+  transition: 0.3s
+
+.stop:hover, .accept:hover, .neutral:hover
+  transform: scale(0.99)
+
+.accept
+  background: $green-btn
+  border: 1px solid $green-btn
+  transition: 0.3s
+
+.neutral
+  background: $main
+  border: 1px solid $main
+  transition: 0.3s
+  width: 100%
+
+.fs-1-1
+  font-size: 1.1em
+  width: 100%
+  border-radius: 10px 15px
+
+.fs-1-5
+  font-size: 1.2em
+
+.button-margin
+  margin: 0 0 2vh 0
+  padding: 1vh
+
+.img-cross 
+  height: 30px
+  margin-top: 10px
+  cursor: pointer
+
+.img-cross:hover 
+  transition: .5s
+  transform: rotate(360deg)
+
+.img-cross:active 
+  transition: .5s
+  transform: scale(.9)
+
+//* --CHECKBOX-- *//
+.toggler-wrapper
+  display: block
+  width: 45px
+  height: 25px
+  cursor: pointer
+  position: relative
+
+.toggler-wrapper input[type="checkbox"]
+  display: none
+
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider
+  background-color: #44cc66
+
+.toggler-wrapper .toggler-slider
+  background-color: #fff
+  position: absolute
+  border-radius: 100px
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  transition: all 300ms ease
+
+.toggler-wrapper .toggler-knob
+  position: absolute
+  transition: all 300ms ease
+
+.toggler-wrapper.style-8 input[type="checkbox"]:checked+.toggler-slider
+  background-color: #e9e0e0
+
+.toggler-wrapper.style-8 input[type="checkbox"]:checked+.toggler-slider .toggler-knob
+  left: 3px
+  background: conic-gradient(#4ccc9b, #43A047)
+  transform: rotate(360deg)
+
+.toggler-wrapper.style-8 .toggler-slider
+  background-color: #e9e0e0
+
+.toggler-wrapper.style-8 .toggler-knob
+  width: calc(25px - 6px)
+  height: calc(25px - 6px)
+  border-radius: 50%
+  
+  left: calc(100% - 19px - 3px)
+  top: 3px
+  background: conic-gradient(rgba(231, 67, 67, 0.7), #E53935)
+
+//* --ITEM-- *//
+.wrap-item-content-block
+  display: grid
+  grid-template-rows: 25vh 20vh
+  box-shadow: inset 0px 0px 20px rgba(76, 99, 115, 0.3)
+  border-radius: 20px
+  padding: 1.5vh 1.5vh
+  box-sizing: border-box
+  overflow: hidden
+
+.item-content-block
+  display: grid
+  color: $base   
+
+.item-content-box
+  display: grid
+  align-items: center
+  justify-content: end
+
+.item-content-box-item
+  text-align: right
+  font-size: 1.2em
+  padding-bottom: 1vh
+  box-sizing: border-box
+
+.item-content-box-item:first-child
+  font-size: 1.4em
+
+.item-content-icon-list
+  display: grid
+  grid-template-columns: 1fr 1fr
+
+.item-content-icon-item
+  display: grid
+  align-items: center
+  margin-left: 2vw
+  
+.item-content-icon-item:last-child
+  justify-content: end
+  margin-left: 0
+  margin-right: 2vw
+
+//* --404-- *//
+.wrap-404
+  height: 100vh
+  position: relative
+
+.block-404-img
+  width: 100%
+  height: 100%
+  object-fit: cover
+  
+.block-404
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  botoom: 0
+  background: rgba(76, 99, 115, 0.9)
+  height: 100vh
+  display: grid
+  grid-template-rows: 1fr 2fr
+
+.logo-404
+  width: 40%
+  margin: 0 auto
+  display: grid
+  justify-content: center
+  align-items: center
+
+.logo-404 .img-logo
+  height: 12vh
+  width: auto
+  margin-top: 10vh
+
+.content-box-404
+  text-align: center
+
+.box-404
+  font-size: 15em
+  color: #fff
+
+.content-404
+  font-size: 2em
+  color: #fff
+  text-transform: uppercase
+
+.link-404
+  padding: 2vh
+  font-size: 2em
+  border-radius: 10px 20px
+  display: block
+  width: 10vw
+  margin: 10vh auto
+  cursor: pointer
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.2)
+
+.link-404:hover
+  color: #fff
