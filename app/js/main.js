@@ -173,6 +173,14 @@ var appMaster = {
     });
   },
 
+  closeModal: function(){
+    $('.js-close').click(function (){
+        $('.modal-block').removeClass('modal-block-open');
+        $('.js-link-2').removeClass('open-box');
+    });
+  },
+
+
   authBox: function(){
     $('.js-call').click(function(){
       $('.auth-block').addClass('callback-visible');
@@ -186,7 +194,7 @@ var appMaster = {
   },
 
   authBoxSlide: function(){
-    $('.registration-slide').click(function(){      
+    $('.registration-slide').click(function(){
       $('.block-auth').removeClass('visible-block-auth');
       $('.block-reg').addClass('visible-block-auth');
     });
@@ -198,14 +206,13 @@ var appMaster = {
   },
 
   authBoxForm: function(){
-      $('.form-auth').submit(function (e) {
-        e.preventDefault();
-
-        let input = $('.form-auth').find('.input-auth');
-        var error = false;
-
+    $('.form-auth').submit(function (e) {
+      e.preventDefault();
+        console.log(1);
+        let input = $('.form-auth').find('.input-auth'),
+          error = false;
         $.each(input, function (index, element) {
-          if ($(this).val() == '') {
+          if ($(this).val() === '') {
             error = true;
             $(this).addClass('input-error');
             $(this).parent().addClass('wrap-input-padding');
@@ -217,29 +224,38 @@ var appMaster = {
           }
         });
 
-        if (error == false) {
+        if (error === false) {
           let formData = $(this).serializeArray();
-            $.ajax({
-                method: "POST",
-                headers: {
-                    Accept: "application/json"
-                },
-                url: '/login',
-                data: formData,
-                success: () => window.location.assign("service.mdr"),
-                error: (response) => {
-                    if(response.status === 422) {
-                        let errors = response.responseJSON.errors;
-                        Object.keys(errors).forEach(function (key) {
-                            $('.wrap-input-auth').eq(1).attr('data-answer', errors[key][0]);
-                        });
-                    } else {
-                        window.location.reload();
-                    }
+          $.ajax({
+            method: "POST",
+            headers: {
+              Accept: "application/json"
+            },
+            url: '/login',
+            data: formData,
+              success: () => {
+                  $('.auth-block').removeClass('callback-visible');
+                  $('.visible').removeClass('noscroll');
+                  $('.link-auth-item').removeClass('auth-item-slid');
+                  $('.enter-profile').attr('data-tooltipe', 'Личный кабинет');
+                  $('.modal-block').addClass('modal-block-open');
+                  $('.js-link-2').addClass('open-box');
+                  $('.modal-content').text('Вы успешно авторизировались на нашем сайте.');
+              },
+              error: (response) => {
+                if(response.status === 422) {
+                  let errors = response.responseJSON.errors;
+                  Object.keys(errors).forEach(function (key) {
+                    $("." + key + "Error").addClass('wrap-input-padding');
+                    $("." + key + "Error").attr('data-answer', errors[key][0]);
+                  });
+                  } else {
+                    window.location.reload();
+                  }
                 }
             })
-        }             
-      });
+        }
+    });
   },
 
   regBoxForm: function(){
@@ -250,7 +266,7 @@ var appMaster = {
         var error = false;
 
         $.each(input, function (index, element) {
-          if ($(this).val() == '') {
+          if ($(this).val() === '') {
             error = true;
             $(this).addClass('input-error');
             $(this).parent().addClass('wrap-input-padding');
@@ -262,8 +278,8 @@ var appMaster = {
           }
         });
 
-        if (error == false) {
-          let formData = $(this).serializeArray();          
+        if (error === false) {
+          let formData = $(this).serializeArray();
           $.ajax({
              method: "POST",
              headers: {
@@ -271,19 +287,28 @@ var appMaster = {
              },
              url: '/register',
              data: formData,
-             success: () => window.location.assign("service.mdr"),
+             success: () => {
+                 $('.auth-block').removeClass('callback-visible');
+                 $('.visible').removeClass('noscroll');
+                 $('.link-auth-item').removeClass('auth-item-slid');
+                 $('.enter-profile').attr('data-tooltipe', 'Личный кабинет');
+                 $('.modal-block').addClass('modal-block-open');
+                 $('.js-link-2').addClass('open-box');
+                 $('.modal-content').text('Вы успешно зарегестрировались на нашем сайте.');
+             },
              error: (response) => {
                 if(response.status === 422) {
                    let errors = response.responseJSON.errors;
                    Object.keys(errors).forEach(function (key) {
-                       $("." + key + "Error").text(errors[key][0]);
+                       $("." + key + "ErrorReg").addClass('wrap-input-padding');
+                       $("." + key + "ErrorReg").attr('data-answer', errors[key][0]);
                    });
                 } else {
                    window.location.reload();
                 }
              }
           })
-        }          
+        }
      });
   },
 
@@ -568,6 +593,7 @@ $(document).ready(function(){appMaster.scrollMenu();
   appMaster.sliderTwo();
   appMaster.callback();
   appMaster.callbackBox();
+  appMaster.closeModal();
   appMaster.authBox();
   appMaster.authBoxSlide();
   appMaster.authBoxForm();

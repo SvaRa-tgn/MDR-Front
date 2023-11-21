@@ -267,6 +267,26 @@
   margin-bottom: 5vh;
 }
 
-.footer-admin {
+.admin-main-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
+
+.create-product-data {
+  padding-bottom: 5vh;
+}
+
+.wrap-footer {
+  display: none;
+}
+
+.footer-nav {
+  display: none;
+}
+
+.footer {
   padding: 0;
 }

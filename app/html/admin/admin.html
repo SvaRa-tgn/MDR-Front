@@ -29,13 +29,72 @@
 <body>
   <div class="wrap-admin">
     <header class="header bg-admin">
-      <nav class="nav">
+      <nav class="nav nav-scroll">
         <div class="wrap-nav">
           <div class="nav-logo">
             <a class="logo-link" href="/index.html">
               <img class="img-logo" src="/img/src/logo/logo.svg" alt="MDR">
             </a>            
-          </div>          
+          </div>
+  
+          <ul class="navigation-list">
+            <li class="navigation-item animation-nav">
+              <a class="nav-link-box" href="/index.html">
+                Главная
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav">
+              <a class="nav-link-box" href="/html/catalog/catalog.html">
+                Каталог
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav">
+              <a class="nav-link-box" href="/html/header-page/new.html">
+                Наши новинки
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav">
+              <a class="nav-link-box" href="/html/header-page/recomendation.html">
+                Мы рекомендуем
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav">
+              <a class="nav-link-box" href="/html/header-page/idea.html">
+                Идеи для вас
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav">
+              <a class="nav-link-box" href="/html/header-page/pop.html">
+                Популярные товары
+              </a>              
+            </li>
+            <li class="navigation-item animation-nav">
+              Контакты
+            </li>
+          </ul>
+
+          <div class="auth">
+            <ul class="auth-list">
+              <li class="auth-item" data-tooltipe="Поиск">
+                <img class="img-auth-item" src="/img/src/icon/search.png" alt="Поиск по сайту">
+              </li>
+              <li class="auth-item" data-tooltipe="Написать нам">
+                <a class="link-auth-item" href="#">
+                  <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>                
+                </a>                
+              </li>
+              <li class="auth-item" data-tooltipe="Корзина">
+                <a class="link-auth-item" href="#">
+                  <i class="fa fa-shopping-cart fa-2x fa-cart" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="auth-item" data-tooltipe="Вход / Регистрация">
+                <a class="link-auth-item" href="/html/private/private-account.html">
+                  <i class="fa fa-sign-in fa-3x fa-sign" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>        
       </nav>
     </header>
@@ -70,6 +129,16 @@
                   <a class="link-aside-admine" href="/html/admin/admin.html"><h2 class="admine-h3">Личные даные админа</h2></a>
                 </li>                            
               </ul>
+
+              <h2 class="aside-h2 aside-admine-h2">Классификатор для каталога:</h2>
+              <ul class="aside-nav-list">
+                <li class="aside-admine-nav-item">
+                  <a class="link-aside-admine" href="/html/admin/category.html"><h2 class="admine-h3">Категория товара</h2></a>
+                </li>
+                <li class="aside-admine-nav-item">
+                  <a class="link-aside-admine" href="/html/admin/sub-category.html"><h2 class="admine-h3">Подкатегория товара</h2></a>
+                </li>                        
+              </ul>
               
               <h2 class="aside-h2 aside-admine-h2">Товар:</h2>
               <ul class="aside-nav-list">
@@ -88,17 +157,7 @@
                 <li class="aside-admine-nav-item">
                   <a class="link-aside-admine" href="/html/admin/color.html"><h2 class="admine-h3">Цвет для мебели</h2></a>
                 </li>         
-              </ul>
-
-              <h2 class="aside-h2 aside-admine-h2">Классификатор:</h2>
-              <ul class="aside-nav-list">
-                <li class="aside-admine-nav-item">
-                  <a class="link-aside-admine" href="/html/admin/category.html"><h2 class="admine-h3">Новая категория</h2></a>
-                </li>
-                <li class="aside-admine-nav-item">
-                  <a class="link-aside-admine" href="/html/admin/sub-category.html"><h2 class="admine-h3">Новая подкатегория</h2></a>
-                </li>                        
-              </ul>
+              </ul>              
             </div>            
           </div> 
           <div class="wrap-aside-h1 wrap-a-left">
@@ -215,6 +274,249 @@
     </main>
     
     <footer class="footer-admin">
+      <div class="wrap-footer">
+        <section class="left-footer">
+          <div class="footer-slogan">
+            <div class="wrap-footer-span">
+              <span class=footer-span>My  Decor  Room</span> - Ваш надежный поставщик мебели!
+            </div>            
+          </div>
+          <ul class="wrap-footer-nav-list">
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Гостиные</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Модульные гостиные</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Стенки</a>
+                </li>                
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Комоды</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Журнальные столы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Полки и антресоли</a>
+                </li>                
+              </ul>
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Детская мебель</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Модульные детские</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Кровати детские</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Письменные столы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Шкафы и стеллажи</a>
+                </li>                
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Комоды</a>
+                </li>                
+              </ul>
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Домашний офис</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Письменные столы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Компьютерные столы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Компьютерные кресла</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Стеллажи</a>
+                </li>
+              </ul>
+            </li>            
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Прихожие</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Модульные прихожие</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Готовые прихожие</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Угловые прихожие</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Шкафы для прихожей</a>
+                </li> 
+              </ul>               
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Спальни</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Модульные спальни</a>
+                </li>                
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Прикроватные тумбы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Комоды</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Столы туалетные</a>
+                </li>
+              </ul>
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Шкафы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Шкафы-купе</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Распашные шкафы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Шкафы для одежды</a>
+                </li>
+              </ul>
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Кухни</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Модульные кухни</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Готовые кухни</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Обеденые столы</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Кухонные диваны и уголки</a>
+                </li>
+              </ul>
+            </li>
+            <li class="wrap-footer-nav-item">
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Мягкая мебель</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Диваны</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Кресла</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="link-footer-nav" href="#">Пуфы</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+  
+        <section class="right-footer">
+          <ul class="footer-data-list">            
+            <li class="footer-data-item">
+              <img class="footer-img-logo" src="/img/src/logo/logo.svg" alt="Логотип" />
+            </li>
+            <li class="footer-data-item">
+              My Decor Room - Мебельный интернет-магазин.
+            </li>
+            <li class="footer-data-item">
+              e-mail: manager@mydecor-room.ru
+            </li>
+            <li class="footer-data-item">
+              <a class="footer-data-link" href="tel:+79209685108">тел: +7 920 968-51-08</a>
+            </li>
+            <li class="footer-data-item">
+              Наименование юридического лица:
+            </li>
+            <li class="footer-data-item">
+              ИП Чулин Д.С.
+            </li>
+            <li class="footer-data-item">
+              ОГРНИП: 321623400030109
+            </li>
+            <li class="footer-data-item">
+              Место нахождения организации:
+            </li>
+            <li class="footer-data-item">
+              390000 г. Рязань, Ряжское шоссе, д.20 «КАСКАД» офис 311
+            </li>
+            <li class="footer-data-item">
+              <img class="bank" src="/img/src/icon/bank-icon.png" alt="Платежные системы" />
+            </li>
+            <li class="footer-data-item">
+              <ul class="footer-soc-list">
+                <li class="footer-soc-item">
+                  <a class="footer-soc-link" target="_blank" href="#"><img class="soc-img" src="/img/src/icon/od.png" alt="Vkontakte" /></a>
+                </li>
+                <li class="footer-soc-item">
+                  <a class="footer-soc-link" target="_blank" href="#"><img class="soc-img" src="/img/src/icon/tg.png" alt="Telegram" /></a>
+                </li>
+                <li class="footer-soc-item">
+                  <a class="footer-soc-link" target="_blank" href="#"><img class="soc-img" src="/img/src/icon/vk.png" alt="odnoklassniki" /></a>
+                </li>                
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="footer-nav">
+        <div class="footer-link">
+          <ul class="footer-link-list">
+            <li class="footer-link-item">
+              г. Рязань
+            </li>
+            <li class="footer-link-item">
+              <a class="footer-link-link" href="index.html">В начало страницы</a>
+            </li>
+            <li class="footer-link-item">
+              <a class="footer-link-link" href="index.html">Главная</a>
+            </li>            
+            <li class="footer-link-item">
+              <a class="footer-link-link" href="/html/info/info.html">Информация</a>
+            </li>
+            <li class="footer-link-item">
+              <a class="footer-link-link" href="/html/service/service.html">Услуги</a>
+            </li>
+            <li class="footer-link-item">
+              <div class="footer-link-link">Сотрудничество</div>
+            </li>
+            <li class="footer-link-item">
+              <a class="footer-link-link" href="aboutus.html">О нас</a>
+            </li>
+            <li class="footer-link-item">
+              &#169; My Decor Room  2023
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section class="signature">
         Design by svara.factory
       </section>      
