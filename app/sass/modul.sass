@@ -9,6 +9,8 @@ $h-link: #B3CCDE
 $green: #6a8981
 
 $red: #714b4f
+
+$gap: 1.5vw
     
 //* --HEADER-- *//
 header
@@ -515,7 +517,7 @@ aside
 .private-page-h3
   text-transform: uppercase
   font-size: 2em
-  margin: 0 0 2vh 5vh
+  margin: 0 0 5vh 5vh
 
 .main-block-list
   display: grid  
@@ -1068,12 +1070,17 @@ footer
 
 .wrap-input
   width: 25vw
-  margin: 0 auto 1vh auto
+  margin: 0 0 3vh 0
   position: relative
   transition: 0.3s
 
-.wrap-input-padding
-  margin: 0 auto 4vh auto
+.wrap-button
+  width: 30vw
+  margin: 0 0 1vh 0
+
+.wrap-input-auth
+  margin: 0 auto 1vh auto
+
   
 .input-auth
   width: 100%
@@ -1094,7 +1101,7 @@ footer
   content: attr(data-answer)
   background: $red
   color: #fff
-  width: 30vw
+  width: 100%
   box-sizing: border-box
   position: absolute
   padding: 0.5vh 0
@@ -1105,7 +1112,14 @@ footer
   text-align: center
 
 .wrap-input-reg
+  margin: 0 auto 1vh auto
   width: 30vw
+
+.wrap-input-padding
+  margin-bottom: 4vh 
+
+.input-width
+  width: 100%
 
 .btn-reg
   grid-column: span 2

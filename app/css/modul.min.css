@@ -714,7 +714,7 @@ aside {
 .private-page-h3 {
   text-transform: uppercase;
   font-size: 2em;
-  margin: 0 0 2vh 5vh;
+  margin: 0 0 5vh 5vh;
 }
 
 .main-block-list {
@@ -1481,14 +1481,19 @@ footer {
 
 .wrap-input {
   width: 25vw;
-  margin: 0 auto 1vh auto;
+  margin: 0 0 3vh 0;
   position: relative;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.wrap-input-padding {
-  margin: 0 auto 4vh auto;
+.wrap-button {
+  width: 30vw;
+  margin: 0 0 1vh 0;
+}
+
+.wrap-input-auth {
+  margin: 0 auto 1vh auto;
 }
 
 .input-auth {
@@ -1515,7 +1520,7 @@ footer {
   content: attr(data-answer);
   background: #714b4f;
   color: #fff;
-  width: 30vw;
+  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
@@ -1529,7 +1534,16 @@ footer {
 }
 
 .wrap-input-reg {
+  margin: 0 auto 1vh auto;
   width: 30vw;
+}
+
+.wrap-input-padding {
+  margin-bottom: 4vh;
+}
+
+.input-width {
+  width: 100%;
 }
 
 .btn-reg {

@@ -55,10 +55,6 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.wrap-create-product-item, .create-product-list {
-  padding: 0.5vh;
-}
-
 .wrap-create-product-item {
   height: 7vh;
 }
@@ -68,17 +64,27 @@
   color: #4C6373;
 }
 
+.db-product-label {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #4C6373;
+  font-weight: bold;
+  padding-bottom: 3vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .create-product-select, .create-product-input {
   width: 25vw;
-  margin: 0 auto 0 auto;
-  height: 4vh;
+  margin: 1vh auto 0 auto;
+  height: 5vh;
   padding: 0 1vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 5px 10px;
+  border-radius: 20px 10px;
   border: 2px solid #4c6373;
   outline: none;
-  font-size: 1.3em;
+  font-size: 1.4em;
   -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
 }
@@ -122,18 +128,37 @@
 }
 
 .modul-category-data {
-  font-size: 1.3em;
-  padding-top: 1vh;
+  font-size: 1.5em;
+  padding-bottom: 1vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5vw;
+  -ms-grid-columns: 4fr 1fr;
+  grid-template-columns: 4fr 1fr;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #4C6373;
+}
+
+.modul-admin-data {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5vw;
+  font-size: 1.5em;
+}
+
+.wrap-img-category {
+  border-radius: 20px 10px;
+  overflow: hidden;
+  height: 20vh;
+  width: 100%;
+  margin-top: 2vh;
 }
 
 .modul-button {
@@ -142,10 +167,14 @@
 }
 
 .modul-button-delete {
-  width: 70%;
+  width: 100%;
   margin-top: 0;
-  padding: 1vh 0;
-  font-size: 0.8em;
+  padding: 0.7vh 0;
+  font-size: 0.7em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-transform: none;
+  border-radius: 10px;
 }
 
 .modul-button-delete:hover {
@@ -273,10 +302,13 @@
   -ms-grid-rows: auto 1fr;
   grid-template-rows: auto 1fr;
   height: 100%;
+  padding-bottom: 5vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.create-product-data {
-  padding-bottom: 5vh;
+.width-modal-form {
+  width: 100%;
 }
 
 .wrap-footer {

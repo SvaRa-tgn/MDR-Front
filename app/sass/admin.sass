@@ -52,9 +52,6 @@ $red: #714b4f
   display: grid
   grid-template-columns: 1fr 1fr
 
-.wrap-create-product-item, .create-product-list
-  padding: 0.5vh
-
 .wrap-create-product-item
   height: 7vh
 
@@ -62,16 +59,24 @@ $red: #714b4f
   font-size: 1.5em
   color: $base
 
+.db-product-label
+  font-size: 1.5em
+  text-transform: uppercase
+  color: $base
+  font-weight: bold
+  padding-bottom: 3vh
+  box-sizing: border-box
+
 .create-product-select, .create-product-input
   width: 25vw
-  margin: 0 auto 0 auto
-  height: 4vh
+  margin: 1vh auto 0 auto
+  height: 5vh
   padding: 0 1vh
   box-sizing: border-box
-  border-radius: 5px 10px 
+  border-radius: 20px 10px
   border: 2px solid #4c6373
   outline: none
-  font-size: 1.3em
+  font-size: 1.4em
   box-shadow: 0 5px 15px 0 rgba(0,0,0,.2)
 
 .admin-button
@@ -101,22 +106,40 @@ $red: #714b4f
   align-items: center
 
 .modul-category-data
-  font-size: 1.3em
-  padding-top: 1vh
+  font-size: 1.5em
+  padding-bottom: 1vh
   display: grid
-  grid-template-columns: 1fr 1fr 1fr
+  gap: 0.5vw
+  grid-template-columns: 4fr 1fr 
   justify-content: center
   align-items: center
+  color: $base
+
+.modul-admin-data
+  display: grid
+  grid-template-columns: 1fr 1fr 
+  gap: 0.5vw
+  font-size: 1.5em
+
+.wrap-img-category
+  border-radius: 20px 10px
+  overflow: hidden
+  height: 20vh
+  width: 100%
+  margin-top: 2vh
 
 .modul-button
   width: 70%
   margin-top: 2vh
 
 .modul-button-delete
-  width: 70%
+  width: 100%
   margin-top: 0
-  padding: 1vh 0
-  font-size: 0.8em
+  padding: 0.7vh 0
+  font-size: 0.7em
+  transition: 0.3s
+  text-transform: none
+  border-radius: 10px 
 
 .modul-button-delete:hover
   color: $h-link
@@ -203,11 +226,13 @@ $red: #714b4f
 
 .admin-main-block
   display: grid
-  grid-template-rows: auto 1fr
+  grid-template-rows: auto 1fr 
   height: 100%
-
-.create-product-data
   padding-bottom: 5vh
+  box-sizing: border-box
+
+.width-modal-form
+  width: 100%
   
 //* --FOOTER-- *//
 .wrap-footer
