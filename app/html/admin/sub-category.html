@@ -110,170 +110,129 @@
 
         <section class="admin-main-block">
           <div class="wrap-head-page bg-admin">
-            <h1 class="page-h1">Создать подкатегорию</h1>
+              <h1 class="page-h1">Создать подкатегорию</h1>
           </div>
 
-          <div class="wrap-head-page-h3">
-            <h3 class="page-h3 color-admin">Данные о подкатегории:</h3>                            
-          </div>
+          <div class="main-private-data-item">
+              <div class="wrap-head-page-h3">
+                  <h3 class="private-page-h3 color-admin">Данные о подкатегории:</h3>
+              </div>
+              <div class="wrap-create-product-data">
 
-          <div class="wrap-create-product-data">
-            <form class="create-product-data">
-              <ul class="wrap-create-collection-list">
-                <li class="wrap-create-product-item">
-                  <label class="create-product-label">
-                    Категория товара
-                  </label>
-                  <div class="wrap-create-product-item">
-                    <select class="create-product-select" name="class" id="class" required>
-                      <option class="class" value="" >--Выберите категорию товара--</option>
-                      <option class="class" value="Гостиные">Гостиные</option>
-                      <option class="class" value="Кухни">Кухни</option>
-                      <option class="class" value="Детские">Детские</option> 
-                      <option class="class" value="Домашний офис">Домашний офис</option>                 
-                      <option class="class" value="Прихожие">Прихожие</option>
-                      <option class="class" value="Спальни">Спальни</option>
-                      <option class="class" value="Шкафы">Шкафы</option>                  
-                      <option class="class" value="Мягкая мебель">Мягкая мебель</option>
-                    </select>
+                   <div class="wrap-edit-data">
+                      <div class="db-product-label">
+                          Создание подкатегории:
+                      </div>
+
+                      <form class="create-product-data form-create-category" data-form="sub-category" method="POST" action="{{ route('createCategory.create') }}" enctype="multipart/form-data">
+                          <div class="wrap-input js-select">
+                              <label class="create-product-label">
+                                  Категория товара
+                              </label>
+                              <select class="create-product-select input-category" name="category" id="class">
+                                  <option class="class" value="" >--Выберите категорию товара--</option>
+                                      <option class="class" data-categoryId = "{{$category->id}}" value="{{$category->name}}">{{$category->name}}</option>
+                              </select>
+                          </div>
+                          <div class="wrap-input Error" data-answer="">
+                              <label class="create-product-label">
+                                  Название новой подкатегории
+                              </label>
+                              <input class="create-product-input input-category" type="text" id="sub_category" name="sub_category" value="{{ old('name') }}" />
+                          </div>
+                          <div class="wrap-input categoryError" data-answer="">
+                              <label class="create-product-label">
+                                  Выберите фото
+                              </label>
+                              <input class="create-product-input-foto input-category" type="file" id="foto" name="image" accept="image/*" />
+                          </div>
+                          <div class="wrap-button">
+                              <button class="button-auth accept" type="submit" name="submit-auth">Сохранить</button>
+                          </div>
+                      </form>
                   </div>
-                </li>
-                <li class="wrap-create-product-item">
-                  <label class="create-product-label">
-                    Название новой подкатегории
-                  </label>
-                  <div class="wrap-create-product-item">
-                    <input class="create-product-input" type="text" id="new_category" name="new_category" required />
+
+                  <div class="create-product-data">
+                      <div class="db-product-label">
+                          Список Подкатегорий в базе:
+                      </div>
+
+                      <div class="db-non-list">
+                        Вы пока не создали ни одной подкатегории.
+                      </div>
+
+                      <div class="db-product-list">
+                        Гостиные
+                      </div>
+                      <ul class="create-product-list">
+                          <li class="create-product-item modul-category-data" data-action="Категорию">
+                              <article class="collect-article">Диваны</article>
+
+                              <a class="mdr-button accept modul-button-delete" href="{{route('editSubCategory.edit', [$subCategory->id, $name = Transliterate::slugify($subCategory->sub_category)])}}">
+                                  Редактировать
+                              </a>
+                          </li>
+                          <li class="create-product-item modul-category-data" data-action="Категорию">
+                            <article class="collect-article">Диваны</article>
+
+                            <a class="mdr-button accept modul-button-delete" href="{{route('editSubCategory.edit', [$subCategory->id, $name = Transliterate::slugify($subCategory->sub_category)])}}">
+                                Редактировать
+                            </a>
+                          </li>
+                          <li class="create-product-item modul-category-data" data-action="Категорию">
+                            <article class="collect-article">Диваны</article>
+
+                            <a class="mdr-button accept modul-button-delete" href="{{route('editSubCategory.edit', [$subCategory->id, $name = Transliterate::slugify($subCategory->sub_category)])}}">
+                              Редактировать
+                            </a>
+                          </li>
+                          <li class="create-product-item modul-category-data" data-action="Категорию">
+                            <article class="collect-article">Диваны</article>
+
+                            <a class="mdr-button accept modul-button-delete" href="{{route('editSubCategory.edit', [$subCategory->id, $name = Transliterate::slugify($subCategory->sub_category)])}}">
+                              Редактировать
+                            </a>
+                          </li>
+                      </ul>
+
+                      <div class="db-product-list">
+                        Детские
+                      </div>
+                      <ul class="create-product-list">
+                        <li class="create-product-item modul-category-data" data-action="Категорию">
+                          <article class="collect-article">Диваны</article>
+
+                          <a class="mdr-button accept modul-button-delete" href="{{route('editSubCategory.edit', [$subCategory->id, $name = Transliterate::slugify($subCategory->sub_category)])}}">
+                              Редактировать
+                          </a>
+                      </li>
+                      <li class="create-product-item modul-category-data" data-action="Категорию">
+                        <article class="collect-article">Диваны</article>
+
+                        <a class="mdr-button accept modul-button-delete" href="{{route('editSubCategory.edit', [$subCategory->id, $name = Transliterate::slugify($subCategory->sub_category)])}}">
+                            Редактировать
+                        </a>
+                      </li>
+                      <li class="create-product-item modul-category-data" data-action="Категорию">
+                        <article class="collect-article">Диваны</article>
+
+                        <a class="mdr-button accept modul-button-delete" href="{{route('editSubCategory.edit', [$subCategory->id, $name = Transliterate::slugify($subCategory->sub_category)])}}">
+                          Редактировать
+                        </a>
+                      </li>
+                      <li class="create-product-item modul-category-data" data-action="Категорию">
+                        <article class="collect-article">Диваны</article>
+
+                        <a class="mdr-button accept modul-button-delete" href="{{route('editSubCategory.edit', [$subCategory->id, $name = Transliterate::slugify($subCategory->sub_category)])}}">
+                          Редактировать
+                        </a>
+                      </li>
+                      </ul>
                   </div>
-                </li> 
-                <li class="wrap-create-product-item">
-                  <label class="create-product-label">
-                    Название новой подкатегории по английски
-                  </label>
-                  <div class="wrap-create-product-item">
-                    <input class="create-product-input" type="text" id="new_category_inenglish" name="new_category_inenglish" required />
-                  </div>
-                </li>
-                <li class="wrap-create-product-item">
-                  <label class="create-product-label">
-                    Выберите фото
-                  </label>
-                  <div class="wrap-create-product-item">
-                    <input class="create-product-input-foto" type="file" id="foto" name="foto" accept="image/png, image/jpeg" required/>
-                  </div>
-                </li>
-                <li class="wrap-create-product-item">
-                  <button class="mdr-button accept modul-button">
-                    Сохранить
-                  </button>
-                </li>             
-              </ul>            
-            </form>
-  
-            <div class="create-product-data">
-              <ul class="wrap-create-collection-list">
-                <li class="wrap-create-product-item">
-                  <label class="create-product-label">
-                    Подкатегории в базе:
-                  </label>
-                  <ul class="create-product-list">
-                    <li class="create-product-item modul-category-data">
-                      <article class="collect-article">Модульная коллекция</article>
-                      <button class="mdr-button stop modul-button-delete">
-                        Удалить
-                      </button>
-                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
-                        Редактировать
-                      </a>
-                    </li> 
-                    <li class="create-product-item modul-category-data">
-                      <article class="collect-article">Модульная коллекция</article>
-                      <button class="mdr-button stop modul-button-delete">
-                        Удалить
-                      </button>
-                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
-                        Редактировать
-                      </a>
-                    </li>
-                    <li class="create-product-item modul-category-data">
-                      <article class="collect-article">Модульная коллекция</article>
-                      <button class="mdr-button stop modul-button-delete">
-                        Удалить
-                      </button>
-                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
-                        Редактировать
-                      </a>
-                    </li>
-                    <li class="create-product-item modul-category-data">
-                      <article class="collect-article">Модульная коллекция</article>
-                      <button class="mdr-button stop modul-button-delete">
-                        Удалить
-                      </button>
-                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
-                        Редактировать
-                      </a>
-                    </li>
-                    <li class="create-product-item modul-category-data">
-                      <article class="collect-article">Модульная коллекция</article>
-                      <button class="mdr-button stop modul-button-delete">
-                        Удалить
-                      </button>
-                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
-                        Редактировать
-                      </a>
-                    </li>
-                    <li class="create-product-item modul-category-data">
-                      <article class="collect-article">Модульная коллекция</article>
-                      <button class="mdr-button stop modul-button-delete">
-                        Удалить
-                      </button>
-                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
-                        Редактировать
-                      </a>
-                    </li>
-                    <li class="create-product-item modul-category-data">
-                      <article class="collect-article">Модульная коллекция</article>
-                      <button class="mdr-button stop modul-button-delete">
-                        Удалить
-                      </button>
-                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
-                        Редактировать
-                      </a>
-                    </li>
-                    <li class="create-product-item modul-category-data">
-                      <article class="collect-article">Модульная коллекция</article>
-                      <button class="mdr-button stop modul-button-delete">
-                        Удалить
-                      </button>
-                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
-                        Редактировать
-                      </a>
-                    </li>
-                    <li class="create-product-item modul-category-data">
-                      <article class="collect-article">Модульная коллекция</article>
-                      <button class="mdr-button stop modul-button-delete">
-                        Удалить
-                      </button>
-                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
-                        Редактировать
-                      </a>
-                    </li>
-                    <li class="create-product-item modul-category-data">
-                      <article class="collect-article">Модульная коллекция</article>
-                      <button class="mdr-button stop modul-button-delete">
-                        Удалить
-                      </button>
-                      <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-sub-category.html">
-                        Редактировать
-                      </a>
-                    </li>
-                  </ul>              
-                </li>
-              </ul>            
-            </div>
+              </div>
           </div>
-        </section>       
       </section>
+  </section>          
     </main>
     
     <footer class="footer-admin">

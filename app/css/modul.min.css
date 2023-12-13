@@ -1490,6 +1490,7 @@ footer {
 .wrap-button {
   width: 30vw;
   margin: 0 0 1vh 0;
+  position: relative;
 }
 
 .wrap-input-auth {
@@ -1567,6 +1568,7 @@ footer {
           box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  position: absolute;
 }
 
 .form-list {
