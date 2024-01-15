@@ -111,67 +111,62 @@
 
         <section class="admin-main-block">
           <div class="wrap-head-page bg-admin">
-            <h1 class="page-h1">Цвет мебели</h1>
+            <h1 class="page-h1">Редактировать Готовую коллекцию</h1>
           </div>
 
           <div class="main-private-data-item">
             <section class="wrap-head-page-h3">
-              <h3 class="private-page-h3 color-admin">Данные о цвете:</h3>
+              <h3 class="private-page-h3 color-admin">Данные Готовой коллекции:</h3>
             </section>
 
             <section class="content-admin-block">              
-              <div class="admin-block-2fr">                
-                <form class="create-product-data form-create-data" data-form="color" method="POST" action="{{ route('createColor.create') }}" enctype="multipart/form-data">
-                  @csrf
-                  <article class="name-admin-block">
-                    Создание Цвета
-                  </article>
-                  <div class="wrap-input colorError" data-answer="Вы не ввели название нового Цвета">
-                    <label class="form-label">
-                      Название нового Цвета
-                    </label>
-                    <input class="admin-select admin-input" type="text" id="new_color" name="color" value="{{ old('color') }}" />
-                  </div>
-                  <div class="wrap-input imageError" data-answer="Вы не добавили фото">
-                    <label class="form-label">
-                      Выберите фото Цвета
-                    </label>
-                    <input class="admin-select admin-foto admin-input" type="file" id="foto" name="image" accept="image/*" />
-                  </div>
-                  <div class="wrap-button">
-                    <button class="button-auth accept" type="submit" name="submit-auth">Сохранить</button>
-                  </div>
-                </form>   
+              <div class="admin-block-2fr"> 
+                <div class="wrap-edit-data">
+                  <form class="form-update-data" data-form="ready_collection_update" method="POST" action="{{ route('updateReadyCollection.update', $ready_collection['id'] )}}" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <article class="name-admin-block">
+                      Редактирование Модульной коллекции:
+                    </article>
+  
+                    <div class="wrap-input ready_collectionError" data-answer="Вы не ввели название новой Модульной коллекции">
+                      <label class="form-label">
+                        Название новой Модульной коллекции
+                      </label>
+                      <input class="admin-select admin-input" type="text" id="ready_collection" name="ready_collection" value="{{ old('ready_collection') }}" />
+                    </div>
+                                      
+                    <div class="wrap-button">
+                      <button class="button-auth accept" data-id="{{$ready_collection['id']}}" type="submit" name="submit-auth">Сохранить</button>
+                    </div>
+                    <form class="itemDelete">
+                      <input type="submit" class="button-auth stop" value="Удалить модульную коллекцию">
+                    </form>
+                  </form>
+                </div>               
+                   
   
                 <div class="wrap-relevant-info">
                   <article class="db-admin-article">
-                    Список Цветов в базе:
+                    Актуальные данные:
                   </article>
-                  @if($colors->isEmpty())
-                  <div class="db-non-list">
-                    Вы пока не создали ни одной Цвета.
-                  </div>        
-                  @else
+                  <div class="db-admin-article db-admin-list">
+                    Название Готовой коллекции:
+                  </div>                  
                   <ul class="relevant-info-list">
-                    @foreach($colors as $color)
-                    <li class="db-relevant-info-item form-label admin-block-2fr-db" data-action="Цвет">
-                      <article class="collect-article" data-id="{{$color->id}}">{{$color->color}}</article>                     
-                      <a class="mdr-button accept modul-button-delete" href="{{route('editColor.edit', $name = $color->slug_color)}}">
-                        Редактировать
-                      </a>
-                    </li>
-                    @endforeach                     
-                  </ul>
-                  @endif   
+                    <li class="db-relevant-info-item form-label admin-block-db">
+                      <article class="collect-article js-category-name" data-tag="Готовую коллекцию">{{$ready_collection['name']}}</article>                   
+                    </li>                     
+                  </ul>                   
                 </div>
               </div>
             </section>
           </div>
-        </section>
+        </section>       
       </section>
     </main>
     
-    <footer class="footer">
+    <footer class="footer-admin">
       <section class="signature">
         Design by svara.factory
       </section>      

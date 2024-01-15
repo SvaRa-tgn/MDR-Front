@@ -17,130 +17,279 @@ $red: #714b4f
   background: #fff
 
 //* --HEADER-ADMIN-- *//
-.aside-admine-h2
-  display: block
-  width: 100%
-  padding: 1vh 0 1vh 0
-  text-align: center
-  color: #fff
-  transition: 0.3s
-  text-transform: uppercase
-
 .bg-admin
-  background: $h-link
+  background: $base
 
 .color-admin
-  color: $h-link
+  color: $base
 
-.link-aside-admine
+//* --ASIDE-- *//
+.wrap-admin-aside-nav
+  height: 100%
+  padding: 5vh 5vh 
+  box-sizing: border-box
+
+.aside-admin-logo
+  width: 100%
+  text-align: center
+  padding-bottom: 2vh
+
+.aside-admin-logo-img
+  width: 70%
+
+.aside-admin-h2
   display: block
   width: 100%
-  padding: 1vh 0 1vh 0
-  text-align: center
+  padding: 1vh 0 1.5vh 0
+  text-align: left
   color: #fff
   transition: 0.3s
+  font-size: 1.4em
+
+.link-aside-admin
+  display: block
+  width: 100%
+  padding: 0 0 1vh 0
+  text-align: left
+  color: #fff
+  transition: 0.3s
+  font-size: 1.2em
 
 .aside-block a:hover
-  color: $alt
+  color: rgba(231, 67, 67, 0.7)
   transition: 0.3s 
 
-.admine-h3
-  text-transform: uppercase
-  font-size: 1.1em
+.aside-admin-nav-list
+  padding-bottom: 2vh
 
-.wrap-create-product-data, .wrap-create-product-list
+//* --CONTENT-BLOCK-- *//
+.admin-main-block
+  display: grid
+  grid-template-rows: auto 1fr 
+  height: 100%
+  box-sizing: border-box
+
+.admin-block-db
+  padding-bottom: 2vh
+
+.admin-block-1fr
+  display: grid
+  grid-template-columns: 1fr
+
+.admin-block-2fr
   display: grid
   grid-template-columns: 1fr 1fr
+  padding-bottom: 5vh
+  width: 100%
 
-.create-product-list
-  padding-bottom: 1vh
+.admin-block-2fr-db
+  display: grid
+  grid-template-columns: 3fr 1fr
+  gap: 0.5vw
+  padding-bottom: 2vh
 
-.wrap-create-product-item
-  height: 7vh
+.admin-block-3fr-db
+  display: grid
+  grid-template-columns: 3fr 1fr 1fr
+  gap: 0.5vw
+  padding-bottom: 2vh
 
-.create-product-label
-  font-size: 1.5em
+.name-admin-block
+  font-size: 1.6em
+  font-style: italic
+  color: $green
+  font-weight: bold
+  padding-bottom: 2vh
+  box-sizing: border-box
+
+.edit-foto
+  display: grid
+  grid-template-columns: 1fr
+  padding-bottom: 5vh
+
+.edit-foto-list
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  gap: 1.5vh
+  grid-auto-rows: 25vh 
+
+.edit-block-foto-item
+  height: 100%
+  width: 100%  
+  position: relative
+
+.wrap-update-input
+  display: grid
+  grid-template-rows: 1fr 1fr
+  align-items: center
+  justify-content: center
+  padding: 5px
+  box-sizing: border-box
+  color: #fff
+
+.filter .form-label
+  color: #fff
+
+.wrap-update-input .form-label, .wrap-update-input .update-input-foto
+  text-align: center
+
+.wrap-edit-image
+  background: #fff
+  height: 100%
+  width: 100%
+  display: grid
+  grid-auto-rows: 9fr 2fr 2fr
+  gap: 1vh
+
+.image-update-form
+  position: absolute
+  top:0
+
+.filter-blur
+  filter: blur(3px)
+
+.js-visibality-form
+  visibility: hidden
+
+.edit-image
+  height: 100%
+  width: 100%
+  overflow: hidden
+  border-radius: 20px 10px
+  position: relative
+
+.img-product-block-item
+  height: 100%
+  width: 100%
+  object-fit: fill
+
+.wrap-filter-box
+  width: 100%
+  height: 100%
+  display: grid
+  align-items: end
+  justify-content: end
+
+.filter-box
+  padding: 2vh
+  color: #fff
+  text-transform: uppercase
+  cursor: pointer
+  font-size: 1em
+  transition: 0.3s
+
+.info-image
+  color: #fff
+  display: grid
+  align-items: center
+  justify-content: center
+  border-radius: 10px 5px
+  background: $h-link
+
+.button-image
+  width: 100%
+  height: 100%
+  border-radius: 10px 5px
+  font-size: 1.1em
+  cursor: pointer
+  color: #fff
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.2)
+  transition: 0.3s
+
+.admin-select
+  width: 25vw
+  margin: 1vh auto 0 auto
+  height: 3vh
+  padding: 0 1vh
+  box-sizing: border-box
+  border-radius: 10px 5px
+  border: 1px solid #4c6373
+  outline: none
+  font-size: 1.2em
+
+.admin-foto
+  border: none
+
+.form-label
+  font-size: 1.4em
   color: $base
+
+.button-form
+  width: 25vw
+  margin: 0 auto 0 auto
+  height: 3vh
+  padding: 0 1vh
+  box-sizing: border-box
+  border-radius: 10px 5px
+  font-size: 1.1em
+  cursor: pointer
+  text-transform: uppercase
+  color: #fff
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.2)
+  transition: 0.3s
+
+.wrap-button-big
+  padding-top: 2vh
+
+.wrap-button-big .button-form
+  height: 5vh
+  border-radius: 20px 10px  
+
+.db-admin-article
+  font-size: 1.6em
+  font-style: italic
+  color: $green
+  font-weight: bold
+  padding-bottom: 2vh
+  box-sizing: border-box
+
+.db-admin-list
+  font-size: 1.4em
+  text-decoration: underline
+  padding-bottom: 1vh
 
 .db-non-list
   font-size: 1.4em
 
-.db-product-label
-  font-size: 1.5em
-  text-transform: uppercase
-  color: $base
-  font-weight: bold
-  padding-bottom: 3vh
-  box-sizing: border-box
-
-.db-product-list
-  font-size: 1.3em
-  text-transform: uppercase
-  color: $base
-  font-weight: bold
-  padding: 1vh 0
-  box-sizing: border-box
-
-.create-product-select, .create-product-input
-  width: 25vw
-  margin: 1vh auto 0 auto
-  height: 5vh
-  padding: 0 1vh
-  box-sizing: border-box
-  border-radius: 20px 10px
-  border: 2px solid #4c6373
-  outline: none
-  font-size: 1.4em
-  box-shadow: 0 5px 15px 0 rgba(0,0,0,.2)
-
-.admin-button
-  width: 50%
-  margin: 5vh 0 10vh 50%
-
-.type-modul-block
-  position: relative
-  overflow: hidden
-  height: 100%
-
-.type-modul, .type-collection, .type-ready
-  position: absolute
-  top: -100%
-  left: 0
-  transition: 0.3s
-
 .visible-type-modul
   top: 0
 
-.modul-collection-data
-  font-size: 1.3em
-  padding-top: 1vh
-  display: grid
-  grid-template-columns: 1fr 1fr
-  justify-content: center
-  align-items: center
+.type-modul-block
+  overflow: hidden
 
-.modul-category-data
-  font-size: 1.5em
-  padding-bottom: 1vh
-  display: grid
-  gap: 0.5vw
-  grid-template-columns: 4fr 1fr 
-  justify-content: center
-  align-items: center
-  color: $base
+.admin-button
+  width: 25vh
+  margin: 5vh 0 0 50%
 
-.modul-admin-data
+.relevant-info-item
+  width: 25vw
+  margin-bottom: 2vh
+
+.db-relevant-info-item
   display: grid
-  grid-template-columns: 1fr 1fr 
-  gap: 0.5vw
-  font-size: 1.5em
+  align-items: center
+  justify-content: start
+
+.relevant-info
+  margin-top: 1vh
+  height: 3vh
+  display: grid
+  align-items: center
+  justify-content: left
+  font-size: 1.6em
 
 .wrap-img-category
   border-radius: 20px 10px
   overflow: hidden
-  height: 20vh
-  width: 100%
+  height: 25vh
+  width: 60%
   margin-top: 2vh
+
+.itemDelete
+  height: 7vh
+
+.wrap-filter-box:hover .filter-box
+  transform: translateY(0%)
 
 .modul-button
   width: 70%
@@ -157,96 +306,6 @@ $red: #714b4f
 
 .modul-button-delete:hover
   color: $h-link
-
-.edit-head
-  font-size: 2em
-  color: $base
-  margin: 4vh 0 2vh 0
-
-.edit-foto
-  display: grid
-  grid-template-columns: 1fr
-
-.edit-foto-list
-  display: grid
-  grid-template-columns: repeat(5, 1fr)
-  gap: 1.5vh
-  grid-auto-rows: 15vh  
-
-.edit-block-foto-item
-  height: 100%
-  width: 100%
-  background: #fff
-  transition: 0.3s linear
-  position: relative
-  border-radius: 10px 20px
-  overflow: hidden
-
-.img-product-block-item
-  height: 100%
-  width: 100%
-  object-fit: fill
-
-.wrap-filter-box
-  width: 100%
-  height: 100%
-  display: grid
-  align-items: center
-  justify-content: center
-
-.filter-box
-  padding: 1vh
-  color: #fff
-  text-transform: uppercase
-  cursor: pointer
-  font-size: 1em
-  transform: translateY(-500%)
-  transition: 0.3s
-  background: $red
-  border-radius: 5px 10px
-
-.wrap-filter-box:hover .filter-box
-  transform: translateY(0%)
-
-.edit-foro-save-list
-  display: grid
-  grid-template-columns: repeat(5, 1fr)
-  gap: 1.5vh
-  padding: 2vh 0 2vh 0
-
-.edit-foto-save-item
-  font-size: 1em
-  display: grid
-  justify-content: center
-  text-align: center
-  height: 100%
-  visibility: hidden
-
-.edit-visible
-  visibility: visible
-
-.edit-product-label
-  font-size: 1em
-  margin-bottom: 1vh
-  display: block
-  text-transform: uppercase
-
-.edit-product-input-foto
-  width: 80%
-
-.wrap-edit-foto-button
-  text-align: center
-  margin-bottom: 5vh
-
-.admin-main-block
-  display: grid
-  grid-template-rows: auto 1fr 
-  height: 100%
-  padding-bottom: 5vh
-  box-sizing: border-box
-
-.width-modal-form
-  width: 100%
   
 //* --FOOTER-- *//
 .wrap-footer

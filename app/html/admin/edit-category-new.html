@@ -111,67 +111,71 @@
 
         <section class="admin-main-block">
           <div class="wrap-head-page bg-admin">
-            <h1 class="page-h1">Цвет мебели</h1>
+            <h1 class="page-h1">Редактировать категорию</h1>
           </div>
 
           <div class="main-private-data-item">
-            <section class="wrap-head-page-h3">
-              <h3 class="private-page-h3 color-admin">Данные о цвете:</h3>
-            </section>
+            <div class="wrap-head-page-h3">
+                <h3 class="private-page-h3 color-admin">Информация о категории:</h3>
+            </div>
 
             <section class="content-admin-block">              
-              <div class="admin-block-2fr">                
-                <form class="create-product-data form-create-data" data-form="color" method="POST" action="{{ route('createColor.create') }}" enctype="multipart/form-data">
-                  @csrf
-                  <article class="name-admin-block">
-                    Создание Цвета
-                  </article>
-                  <div class="wrap-input colorError" data-answer="Вы не ввели название нового Цвета">
-                    <label class="form-label">
-                      Название нового Цвета
-                    </label>
-                    <input class="admin-select admin-input" type="text" id="new_color" name="color" value="{{ old('color') }}" />
-                  </div>
-                  <div class="wrap-input imageError" data-answer="Вы не добавили фото">
-                    <label class="form-label">
-                      Выберите фото Цвета
-                    </label>
-                    <input class="admin-select admin-foto admin-input" type="file" id="foto" name="image" accept="image/*" />
-                  </div>
-                  <div class="wrap-button">
-                    <button class="button-auth accept" type="submit" name="submit-auth">Сохранить</button>
-                  </div>
-                </form>   
+              <div class="admin-block-2fr">  
+                <div class="wrap-edit-data">
+                  <form class="form-update-data" data-form="category-update" method="POST" action="{{ route('updateCategory.update', $category['id'] )}}" enctype="multipart/form-data">
+                    
+                    <article class="name-admin-block">
+                      Редактирование Категории
+                    </article>
+                    <div class="wrap-input categoryError" data-answer="">
+                      <label class="form-label">
+                        Новое название Категории:
+                      </label>
+                      <input class="admin-select admin-input" type="text" id="new_category" name="category" value="{{ old('category') }}" />
+                    </div>
+                    <div class="wrap-input" data-answer="">
+                      <label class="form-label">
+                        Выберите новое фото Категории:
+                      </label>
+                      <input class="admin-select admin-foto admin-input" type="file" id="foto" name="image" accept="image/*" />
+                    </div>
+                    <div class="wrap-button">
+                      <button class="button-auth accept js-up-category" data-id="{{$category['id']}}" type="submit" name="submit-auth">Сохранить</button>
+                    </div>
+                  </form> 
+                  <form class="itemDelete">
+                    <input type="submit" class="button-auth stop" value="Удалить категорию">
+                  </form>
+                </div>              
+                  
   
                 <div class="wrap-relevant-info">
                   <article class="db-admin-article">
-                    Список Цветов в базе:
+                    Актуальные данные:
                   </article>
-                  @if($colors->isEmpty())
-                  <div class="db-non-list">
-                    Вы пока не создали ни одной Цвета.
-                  </div>        
-                  @else
+                  <div class="db-admin-article db-admin-list">
+                    Название Категории:
+                  </div>
                   <ul class="relevant-info-list">
-                    @foreach($colors as $color)
-                    <li class="db-relevant-info-item form-label admin-block-2fr-db" data-action="Цвет">
-                      <article class="collect-article" data-id="{{$color->id}}">{{$color->color}}</article>                     
-                      <a class="mdr-button accept modul-button-delete" href="{{route('editColor.edit', $name = $color->slug_color)}}">
-                        Редактировать
-                      </a>
-                    </li>
-                    @endforeach                     
+                    <li class="db-relevant-info-item form-label admin-block-db">
+                      <article class="collect-article js-category-name" data-tag="Категорию">{{$category['name']}}</article>                   
+                    </li>                     
                   </ul>
-                  @endif   
+                  <div class="db-admin-article db-admin-list">
+                    Фотография Категории:
+                  </div> 
+                  <div class="wrap-img-category">
+                    <img class="main-block-item-img" src="{{asset($category['image'])}}" alt="Мебель в Рязани. {{$category['name']}}" />
+                  </div> 
                 </div>
               </div>
             </section>
           </div>
-        </section>
+        </section>       
       </section>
     </main>
     
-    <footer class="footer">
+    <footer class="footer-admin">
       <section class="signature">
         Design by svara.factory
       </section>      

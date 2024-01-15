@@ -59,46 +59,47 @@
       
       <section class="main-block main-medium-aside">
         <aside class="aside aside-nav">          
-          <div class="wrap-aside-nav bg-admin">
+          <div class="wrap-admin-aside-nav bg-admin">
             <div class="aside-block">
-              <div class="aside-logo">
-                <img class="aside-logo-img" src="/img/src/logo/logo.svg" alt="MDR">
+              <div class="aside-admin-logo">
+                <img class="aside-admin-logo-img" src="/img/src/logo/logo.svg" alt="MDR">
               </div>
-              <h2 class="aside-private-h2 aside-admine-h2">Админка:</h2>
-              <ul class="aside-nav-list">
-                <li class="aside-admine-nav-item">
-                  <a class="link-aside-admine" href="/html/admin/admin.html"><h2 class="admine-h3">Личные даные админа</h2></a>
+              <h2 class="aside-admin-h2">Админка:</h2>
+              <ul class="aside-admin-nav-list">
+                <li class="aside-admin-nav-item">
+                  <a class="link-aside-admin" href="/html/admin/admin.html">Личные даные админа</a>
                 </li>                            
               </ul>
-              
-              <h2 class="aside-h2 aside-admine-h2">Товар:</h2>
-              <ul class="aside-nav-list">
-                <li class="aside-admine-nav-item">
-                  <a class="link-aside-admine" href="/html/admin/create.html"><h2 class="admine-h3">Создать товар</h2></a>
-                </li>
-                <li class="aside-admine-nav-item">
-                  <a class="link-aside-admine" href="/html/admin/edit.html"><h2 class="admine-h3">Редактировать товар</h2></a>
-                </li>
-                <li class="aside-admine-nav-item">
-                  <a class="link-aside-admine" href="/html/admin/modul-collection.html"><h2 class="admine-h3">Коллекция (Модуль)</h2></a>
-                </li>
-                <li class="aside-admine-nav-item">
-                  <a class="link-aside-admine" href="/html/admin/ready-collection.html"><h2 class="admine-h3">Коллекция (Готовая)</h2></a>
-                </li> 
-                <li class="aside-admine-nav-item">
-                  <a class="link-aside-admine" href="/html/admin/color.html"><h2 class="admine-h3">Цвет для мебели</h2></a>
-                </li>         
-              </ul>
 
-              <h2 class="aside-h2 aside-admine-h2">Классификатор:</h2>
-              <ul class="aside-nav-list">
-                <li class="aside-admine-nav-item">
-                  <a class="link-aside-admine" href="/html/admin/category.html"><h2 class="admine-h3">Новая категория</h2></a>
+              <h2 class="aside-admin-h2">Классификация:</h2>
+              <ul class="aside-admin-nav-list">
+                <li class="aside-admin-nav-item">
+                  <a class="link-aside-admin" href="/html/admin/category.html">Категории</a>
                 </li>
-                <li class="aside-admine-nav-item">
-                  <a class="link-aside-admine" href="/html/admin/sub-category.html"><h2 class="admine-h3">Новая подкатегория</h2></a>
-                </li>                        
+                <li class="aside-admin-nav-item">
+                  <a class="link-aside-admin" href="/html/admin/sub-category.html">Подкатегория</a>
+                </li>
+                <li class="aside-admin-nav-item">
+                  <a class="link-aside-admin" href="/html/admin/modul-collection.html">Коллекции (Модуль)</a>
+                </li>
+                <li class="aside-admin-nav-item">
+                  <a class="link-aside-admin" href="/html/admin/ready-collection.html">Коллекции (Готовая)</a>
+                </li> 
+                <li class="aside-admin-nav-item">
+                  <a class="link-aside-admin" href="/html/admin/color.html">Цвет для мебели</a>
+                </li>                              
               </ul>
+              
+              <h2 class="aside-admin-h2">Товар:</h2>
+              <ul class="aside-admin-nav-list">
+                <li class="aside-admin-nav-item">
+                  <a class="link-aside-admin" href="/html/admin/create.html">Создать товар</a>
+                </li>
+                <li class="aside-admin-nav-item">
+                  <a class="link-aside-admin" href="/html/admin/edit.html">Редактировать товар</a>
+                </li>                   
+              </ul>
+              
             </div>            
           </div> 
           <div class="wrap-aside-h1 wrap-a-left">
@@ -114,50 +115,59 @@
           </div>
 
           <div class="main-private-data-item">
-            <div class="wrap-head-page-h3">
-                <h3 class="private-page-h3 color-admin">Данные о категории:</h3>
-            </div>
+            <section class="wrap-head-page-h3">
+              <h3 class="private-page-h3 color-admin">Данные Категории:</h3>
+            </section>
 
-            <div class="wrap-create-product-data">
-              <form class="create-product-data form-create-category" method="POST" action="{{ route('createCategory.create') }}" enctype="multipart/form-data">
-                
-                <div class="wrap-input Error" data-answer="1111">
-                  <label class="create-product-label">
-                    Название новой категории
-                  </label>
-                  <input class="create-product-input input-category" type="text" id="new_category" name="category" value="{{ old('name') }}" />
-                </div>
-                <div class="wrap-input Error" data-answer="">
-                  <label class="create-product-label">
-                    Выберите фото
-                  </label>
-                  <input class="create-product-input-foto input-category" type="file" id="foto" name="image" accept="image/*" />
-                </div>
-                <div class="wrap-button">
-                  <button class="button-auth accept" type="submit" name="submit-auth">Сохранить</button>
-                  <div class="button-closed">Сохранить</div>
-                </div>
-              </form>      
+            <section class="content-admin-block">              
+              <div class="admin-block-2fr">                
+                <form class="create-product-data form-create-data" data-form="category" method="POST" action="{{ route('createCategory.create') }}" enctype="multipart/form-data">
+                  @csrf
+                  <article class="name-admin-block">
+                    Создание Категории
+                  </article>
+                  <div class="wrap-input categoryError" data-answer="Вы не ввели название новой Категории">
+                    <label class="form-label">
+                      Название новой Категории
+                    </label>
+                    <input class="admin-select admin-input" type="text" id="new_category" name="category" value="{{ old('category') }}" />
+                  </div>
+                  <div class="wrap-input imageError" data-answer="Вы не добавили фото">
+                    <label class="form-label">
+                      Выберите фото Категории
+                    </label>
+                    <input class="admin-select admin-foto admin-input" type="file" id="foto" name="image" accept="image/*" />
+                  </div>
+                  <div class="wrap-button">
+                    <button class="button-auth accept" type="submit" name="submit-auth">Сохранить</button>
+                  </div>
+                </form>   
   
-              <div class="create-product-data">
-                <label class="db-product-label">
-                  Список Категорий в базе:
-                </label>
-                <ul class="create-product-list">
-                  <li class="create-product-item modul-category-data">
-                    <article class="collect-article">Модульная коллекция</article>
-                    <button class="mdr-button stop modul-button-delete">
-                      Удалить
-                    </button>
-                    <a class="mdr-button accept modul-button-delete" href="/html/admin/edit-color.html">
-                      Редактировать
-                    </a>
-                  </li> 
-                </ul>            
-              </div>  
-            </div>
+                <div class="wrap-relevant-info">
+                  <article class="db-admin-article">
+                    Список Категорий в базе:
+                  </article>
+                  @if($categories->isEmpty())
+                  <div class="db-non-list">
+                    Вы пока не создали ни одной категории.
+                  </div>        
+                  @else
+                  <ul class="relevant-info-list">
+                    @foreach($categories as $category)
+                    <li class="db-relevant-info-item form-label admin-block-2fr-db" data-action="Категорию">
+                      <article class="collect-article" data-id="{{$category->id}}">{{$category->category}}</article>                      
+                      <a class="mdr-button accept modul-button-delete" href="{{route('editCategory.edit', $name = $category->slug_category)}}">
+                        Редактировать
+                      </a>
+                    </li>
+                    @endforeach                     
+                  </ul>
+                  @endif   
+                </div>
+              </div>
+            </section>
           </div>
-        </section>       
+        </section>
       </section>
     </main>
     
